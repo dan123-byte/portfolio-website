@@ -1,0 +1,100 @@
+/* Body Section */
+body{
+    background-color: white;
+}
+
+/* Navigation Section */
+nav{
+    background-color: #1A2B4C;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 17px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+nav a:hover{
+    color: #FFB347;
+    border-bottom: 2px solid;
+}
+
+/* Home Section */
+#home{
+    background-color: #F5F5F5;
+    padding: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#home-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px;
+}
+#prof_headshot{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 4px solid #FFB347;
+}
+#name{
+    margin-top: 25px;
+    margin-bottom: 5px;  
+    font-family: "Roboto";
+    color: #2C2C2C;
+    font-size: 2.5rem;
+    color: #1A2B4C;            
+}
+#contacts{
+    margin-top: 0;  
+    font-family: "Roboto";
+    color: #2C2C2C;
+    font-size: 1.5rem;
+    color: #1A2B4C;      
+}
+#contacts a i {
+  color: #FFB347; 
+  font-size: 1.7rem;
+  margin: 0 5px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+#contacts a i:hover {
+  color: #1A2B4C; 
+}
+
+#home-right{
+    flex: 2;
+    text-align: justify;
+}
+#summary, #interest{
+    font-family: "Roboto";
+    color: #2C2C2C;
+    font-size: 2.5rem;
+    color: #1A2B4C;            
+    margin-bottom: 10px;
+}
+#summary_description{
+   font-family: "Roboto";
+   font-size: 20px; 
+   color: #2C2C2C;
+}
+ol{
+   font-family: "Roboto";
+   font-size: 20px; 
+   color: #2C2C2C;
+}

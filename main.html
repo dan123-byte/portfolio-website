@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale-1.0">
         <title>Portfolio Website</title>
+        <link rel="icon" href=".\assets\clipboard-list-solid-full.svg" type="image/png">
+
         <link rel="stylesheet" href=".vscode\style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
 
@@ -13,17 +16,30 @@
             <a href="#education">Education</a>
             <a href="#technical-skills">Technical Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#interest">Interests</a>
         </nav>
 
         <section id="home">
-            <h1 id="name">Daniel Andrei Tababa</h1>
-            <h3 id="contacts">Metro Manila, 1013 | danielandrei.tababa@gmail.com | www.linkedin.com/in/daniel-andrei-tababa</h3>
-            <p id="summary">Recent BS Information Technology graduate with hands-on experience in full stack web and mobile development, API 
-            integration, and quality assurance testing. Proficient in tools like FastAPI, Flutter, PostgreSQL, Odoo, and Python. Skilled in 
-            developing user-centered features, writing backend endpoints, and executing functional and performance tests across 
-            multiple platforms. Eager to contribute to a collaborative team and build scalable, high-quality applications.
-            </p>
+            <div id="home-left">
+                <img src="./assets/image_prof.jpg" id="prof_headshot" alt="Professional Headshot">
+                <h3 id="name">Daniel Andrei Tababa</h3>
+                <h3 id="contacts">Metro Manila, 1013 | 
+                    <a href="mailto:danielandrei.tababa@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a> | 
+                    <a href="https://www.linkedin.com/in/daniel-andrei-tababa" target="_blank"><i class="fab fa-linkedin"></i></a></h3>
+            </div>
+            <div id="home-right">
+                <h3 id="summary">Summary</h3>
+                <p id="summary_description">Recent BS Information Technology graduate with hands-on experience in full stack web and mobile development, API 
+                integration, and quality assurance testing. Proficient in tools like FastAPI, Flutter, PostgreSQL, Odoo, and Python. Skilled in 
+                developing user-centered features, writing backend endpoints, and executing functional and performance tests across 
+                multiple platforms. Eager to contribute to a collaborative team and build scalable, high-quality applications.
+                </p>
+                <h3 id="interest">Interest</h3>
+                <ol>
+                    <li>Passionate about improving my skills in HTML, CSS, Python, JavaScript and other related technologies</li>
+                    <li>Follow current trends and innovatios in the console gaming industry</li>
+                    <li>Enjoys collecting travel keychains and spending time with family during weekends and vacations.</li>
+                </ol>
+            </div>
         </section>
 
         <section id="education">
@@ -83,15 +99,9 @@
             <!-- To be filled and created using cards -->
         </section>
 
-        <section id="interest">
-            <h3 id="l_interest">Interest</h3>
-            <p>Passionate about improving my skills in HTML, CSS, Python, JavaScript and other related technologies</p>
-            <p>Follow current trends and innovatios in the console gaming industry</p>
-            <p>Enjoys collecting travel keychains and spending time with family during weekends and vacations.</p>
-        </section>
-
         <footer>
             <p>&copy; 2025 Daniel Andrei Tababa. All rights reserved.</p>
         </footer>
+
     </body>
 </html>
