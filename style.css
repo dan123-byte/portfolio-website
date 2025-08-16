@@ -110,7 +110,7 @@ ol{
 }
 
 #educ_left{
-    flex: 2;
+    flex: 1;
     text-align: justify;
     margin-right: 30px;
     align-items: center;
@@ -124,7 +124,8 @@ ol{
 }
 #university, #college {
     background-color: #FFFFFF;
-    width: 220px;
+    flex: 0 1 220px;
+    max-width: 100%;
     height: 220px;
     padding: 10px;
     border: 4px solid #FFB347;
@@ -141,8 +142,11 @@ ol{
 .image-row {
     display: flex;
     gap: 20px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
-h2{
+.educ_label{
     font-family: "Roboto";
     font-size: 2.5rem;
     color: #FFB347;  
@@ -150,11 +154,12 @@ h2{
 }
 
 #educ_right{
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px; 
 }
 #school{
     margin-top: 25px;
@@ -169,3 +174,97 @@ h2{
     font-size: 1.2rem;
     color: #FFB347;      
 }
+
+/* Technical Skills Section */
+#technical-skills{
+    background-color: #F5F5F5;
+    padding: 60px 0;
+    text-align: center;      
+    margin: 0 auto;           
+    box-sizing: border-box;
+    width: 100%;  
+}
+.tech_label{
+    font-family: "Roboto";
+    margin-top: 10px;
+    font-size: 2.5rem;
+    color: #1A2B4C;  
+    text-align: center;
+}
+.tech-icons {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;          
+    gap: 40px;
+    justify-content: center;
+    padding: 0;
+}
+.tech-icons li {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.tech-icons li i {
+    font-size: 50px;
+    color: #FFB347;
+    transition: color 0.3s;
+}
+.tech-icons li:hover i {
+    color: #1A2B4C;
+}
+.tooltip {
+    position: absolute;
+    bottom: -30px;        
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1A2B4C;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.tech-icons li:hover .tooltip {
+    opacity: 1;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    justify-items: center;
+    margin: 0 auto;
+}
+.skill-category h3 {
+    margin-bottom: 8px;
+    margin-top: 0;  
+    font-family: "Roboto";
+    font-size: 1.7rem;
+    color: #1A2B4C;   
+}
+.skills-fullwidth-container {
+    max-width: 1200px;      
+    margin: 0 auto;        
+    padding: 0 20px;         
+    box-sizing: border-box;
+}
+.skill-category.full-width {
+    grid-column: 1 / -1; 
+    margin: 50px auto 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Project Section */
