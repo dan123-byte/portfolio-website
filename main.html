@@ -12,10 +12,20 @@
     <body>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#education">Education</a>
-            <a href="#technical-skills">Technical Skills</a>
-            <a href="#projects">Projects</a>
+            <div class="nav-container">
+                <div class="logo">Logo</div>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    &#9776; 
+                </label>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                </ul>
+            </div>
         </nav>
 
         <section id="home">
@@ -71,88 +81,104 @@
                     <div class="skill-category">
                         <h3 id="development-tools">Development Tools</h3>             
                         <ul class="tech-icons">
-                            <li><i class="fas fa-code"></i>
-                                <span class="tooltip">Visual Studio Code</span></li>
-                            <li><i class="fas fa-mobile-alt"></i> 
-                                <span class="tooltip">Android Studio</span></li>
-                            <li><i class="fas fa-database"></i> 
-                                <span class="tooltip">pgAdmin 4</span></li>
+                            <li>
+                                <img src="assets/icons/vs.png" alt="Visual Studio Code" class="tech-img">
+                                <span class="tooltip">Visual Studio Code</span>
+                            </li>
+                            <li>
+                                <img src="assets/icons/as.png" alt="Android Studio" class="tech-img">
+                                <span class="tooltip">Android Studio</span>
+                            </li>
+                            <li>
+                                <img src="assets/icons/pgadmin.png" alt="pgAdmin 4" class="tech-img">
+                                <span class="tooltip">pgAdmin 4</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3 id="languages-technologies">Languages & Technologies</h3>
                         <ul class="tech-icons">
                             <li>
-                                <i class="fab fa-python"></i>
+                                <img src="assets/icons/py.png" alt="Python" class="tech-img">
                                 <span class="tooltip">Python</span></li>
                             <li>
-                                <i class="fab fa-js-square"></i>
-                                <span class="tooltip">JavaScript</span></li>
+                                <img src="assets/icons/dart.png" alt="Dart" class="tech-img">
+                                <span class="tooltip">Dart</span>
+                            </li>
                             <li>
-                                <i class="fas fa-mobile-alt"></i>
-                                <span class="tooltip">Dart</span></li>
+                                <img src="assets/icons/sql.png" alt="SQL" class="tech-img">
+                                <span class="tooltip">SQL</span>
+                            </li>
                             <li>
-                                <i class="fas fa-database"></i>
-                                <span class="tooltip">SQL</span></li>
-                            <li>
-                                <i class="fab fa-html5"></i>
+                                <img src="assets/icons/html.png" alt="HTML" class="tech-img">
                                 <span class="tooltip">HTML</span></li>
                             <li>
-                                <i class="fab fa-css3-alt"></i>
-                                <span class="tooltip">CSS</span></li>
+                                <img src="assets/icons/css.png" alt="CSS" class="tech-img">
+                                <span class="tooltip">CSS</span></li>    
+                            <li>
+                                <img src="assets/icons/js.png" alt="JavaScript" class="tech-img">
+                                <span class="tooltip">JavaScript</span></li>
+                       
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3 id="mw-frameworks">Mobile & Web Frameworks</h3>
                         <ul class="tech-icons">
                             <li>
-                                <i class="fas fa-search"></i>
-                                <span class="tooltip">Flutter</span></li>
+                                <img src="assets/icons/flutter.png" alt="Flutter" class="tech-img">
+                                <span class="tooltip">Flutter</span>
+                            </li>
                             <li>
-                                <i class="fas fa-cogs"></i>
-                                <span class="tooltip">FastAPI</span></li>
+                                <img src="assets/icons/fa.png" alt="FastAPI" class="tech-img">
+                                <span class="tooltip">FastAPI</span>
+                            </li>
                             <li>
-                                <i class="fas fa-box"></i>
-                                <span class="tooltip">Odoo</span></li>
+                                <img src="assets/icons/odoo.png" alt="Odoo" class="tech-img">
+                                <span class="tooltip">Odoo</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3 id="database">Databases</h3>
                         <ul class="tech-icons">
                             <li>
-                                <i class="fas fa-database"></i>
-                                <span class="tooltip">SQLite</span></li>
+                                <img src="assets/icons/sqlite.png" alt="SQLite" class="tech-img">
+                                <span class="tooltip">SQLite</span>
+                            </li>
                             <li>
-                                <i class="fas fa-database"></i>
-                                <span class="tooltip">PostgreSQL</span></li>
+                                <img src="assets/icons/postgresql.png" alt="PostgreSQL" class="tech-img">
+                                <span class="tooltip">PostgreSQL</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3 id="version-control">Version Control</h3>
                         <ul class="tech-icons">
                             <li>
-                                <i class="fab fa-git-alt"></i>
-                                <span class="tooltip">Git</span></li>
+                                <img src="assets/icons/git.png" alt="Git" class="tech-img">
+                                <span class="tooltip">Git</span>
+                            </li>
                             <li>
-                                <i class="fab fa-github"></i>
-                                <span class="tooltip">GitHub</span></li>
+                                <img src="assets/icons/github.png" alt="GitHub" class="tech-img">
+                                <span class="tooltip">GitHub</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="skill-category">
                     <h3 id="testing-monitoring">Testing & Monitoring Tools</h3>
                         <ul class="tech-icons">
                             <li>
-                                <i class="fas fa-search"></i>
-                                <span class="tooltip">Scrutinizer</span></li>
+                                <img src="assets/icons/sqlmap.png" alt="sqlmap" class="tech-img">
+                                <span class="tooltip">sqlmap</span>
+                            </li>
                             <li>
-                                <i class="fas fa-shield-alt"></i>
-                                <span class="tooltip">sqlmap</span></li>
+                                <img src="assets/icons/apache.png" alt="Apache Jmeter" class="tech-img">
+                                <span class="tooltip">Apache JMeter</span>
+                            </li>
                             <li>
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span class="tooltip">Apache JMeter</span></li>
-                            <li>
-                                <i class="fas fa-server"></i>
-                                <span class="tooltip">Uptime Robot</span></li>
+                                <img src="assets/icons/uptimerobot.png" alt="Uptime Robot" class="tech-img">
+                                <span class="tooltip">Uptime Robot</span>
+                            </li>
                         </ul>
                     </div>
                 </div>    
@@ -160,8 +186,8 @@
                     <div class="skill-category full-width">
                         <h3 id="other-tools">Other Tools</h3>
                         <ul class="tech-icons">
-                            <li><i class="fas fa-lock"></i><span class="tooltip">OpenSSL</span></li>
-                            <li><i class="fas fa-cube"></i><span class="tooltip">Oracle VirtualBox</span></li>
+                            <li><img src="assets/icons/open.png" alt="OpenSSL" class="tech-img"></i><span class="tooltip">OpenSSL</span></li>
+                            <li><img src="assets/icons/ovb.png" alt="Oracle Virtual Box" class="tech-img"><span class="tooltip">Oracle VirtualBox</span></li>
                         </ul>
                     </div>
                 </div>
@@ -171,6 +197,11 @@
         <section id="projects">
             <!-- To be filled and created using cards -->
              <h2>Projects</h2>
+        </section>
+
+        <section id="certificates">
+            <!-- To be filled and created using cards -->
+             <h2>Certificates</h2>
         </section>
 
         <footer>
