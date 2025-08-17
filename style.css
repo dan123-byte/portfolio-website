@@ -1,6 +1,8 @@
 /* Body Section */
 body{
     background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation Section */
@@ -14,20 +16,20 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 5px 10px;
 }
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 .nav-links li a {
     color: #F5F5F5;
     text-decoration: none;
     font-family: "Roboto";
-    font-size: 1rem;
+    font-size: 1.3rem;
     transition: color 0.3s;
 }
 .nav-links li a:hover {
@@ -42,27 +44,66 @@ nav {
 #menu-toggle {
     display: none;
 }
+.logo {
+    display: flex;           
+    align-items: center;    
+    gap: 5px;            
+}
+.logo img{
+    width: 12dvh;
+    height: auto;
+    background-color: white;
+}
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F5F5F5;        
+}
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
+        top: 100%; 
+        right: 10px;
+        width: 200px;     
+        transform: scaleY(0);    
+        transform-origin: top;   
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
         background-color: #1A2B4C;
         flex-direction: column;
         align-items: center;
-        max-height: 0;
         overflow: hidden;
+        border-radius: 10px; 
+        padding: 10px 0; 
         transition: max-height 0.3s ease-in-out;
     }
     .nav-links li {
-        margin: 15px 0;
+        margin: 12px 0;   
+        width: 100%;  
+        text-align: center;
+    }
+    .nav-links li a {
+        display: block;
+        padding: 12px 20px;
+        text-align: center;   
+        width: 100%;
+        border-radius: 6px;  
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-links li a:hover {
+        background-color: #FFB347;
+        color: #1A2B4C;
+        border-radius: 4px;
     }
     .hamburger {
         display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #F5F5F5;
+        position: relative;
+        z-index: 1000;
     }
     #menu-toggle:checked + .hamburger + .nav-links {
-        max-height: 500px;
+        transform: scaleY(1);    
     }
 }
 
