@@ -257,7 +257,10 @@ ol{
 
 /* Technical Skills Section */
 #technical-skills{
-    background-color: #F5F5F5;
+    background-image: url('./assets/codes_back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 60px 0;
     text-align: center;      
     margin: 0 auto;           
@@ -270,6 +273,7 @@ ol{
     font-size: 2.5rem;
     color: #1A2B4C;  
     text-align: center;
+    font-style: bold;
 }
 .tech-icons {
     list-style: none;
