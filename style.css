@@ -71,74 +71,77 @@ body{
 }
 
 /* Home Section */
-#home{
-    background-color: #F5F5F5;
-    padding: 60px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
+#home {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-#home-left{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 30px;
-}
-#prof_headshot{
-    background-color: #FFFFFF;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border: 4px solid #1A2B4C;
-}
-#name{
-    margin-top: 25px;
-    margin-bottom: 5px;  
-    font-family: "Roboto";
-    font-size: 2.5rem;
-    color: #1A2B4C;            
-}
-#contacts{
-    margin-top: 0;  
-    font-family: "Roboto";
-    font-size: 1.5rem;
-    color: #1A2B4C;      
-}
-#contacts a i {
-  color: #FFB347; 
-  font-size: 1.7rem;
-  margin: 0 5px;
-  transition: color 0.3s;
-  text-decoration: none;
-}
-#contacts a i:hover {
-  color: #1A2B4C; 
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('./assets/backgrounds/home.gif') no-repeat center center/cover;
+  opacity: 0.5; 
+  z-index: -1;
 }
 
-#home-right{
-    flex: 2;
-    text-align: justify;
+#prof_headshot {
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-#summary, #interest{
-    font-family: "Roboto";
-    color: #2C2C2C;
-    font-size: 2.5rem;
-    color: #1A2B4C;            
-    margin-bottom: 10px;
+
+.home-content-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  height: 100%;
+  display: flex;             
+  flex-direction: column;    
+  justify-content: center;    
+  text-align: justify; 
 }
-#summary_description{
-   font-family: "Roboto";
-   font-size: 20px; 
-   color: #2C2C2C;
+
+.custom-list {
+  padding-left: 1rem;
 }
-ol{
-   font-family: "Roboto";
-   font-size: 20px; 
-   color: #2C2C2C;
+
+.custom-list li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+.icon-link {
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #ff8800;
+}
+
+.animate-slide-left,
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-slide-left {
+  transform: translateX(-50px);
+}
+
+.animated {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 
 /* Education Section */
