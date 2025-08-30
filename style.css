@@ -12,21 +12,28 @@ body{
 
 /* Navigation Section */
 .navbar-logo {
-  height: 40px;
+  height: 70px;
+  width: auto;
+  margin: 10px;
 }
 
 .navbar {
-  background-color: #1A2B4C; 
+  background-color: #1E3A8A;
+}
+
+.navbar a{
+  font-size: 1.5rem;
+  margin-left: 20px;
 }
 
 .navbar-brand {
   color: #FFFFFF !important;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .navbar-brand:hover {
-  color: #FFB347 !important; 
+  color: #FFB347 !important;
 }
 
 .nav-link.active {
@@ -34,7 +41,7 @@ body{
 }
 
 .navbar-nav .nav-link {
-  color: #FFFFFF; 
+  color: #FFFFFF;
   position: relative;
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
@@ -48,12 +55,12 @@ body{
   left: 0;
   height: 2px;
   width: 0%;
-  background-color: #FFB347; 
+  background-color: #FFB347;
   transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #FFB347; 
+  color: #FFB347;
 }
 
 .navbar-nav .nav-link:hover::after {
@@ -71,77 +78,140 @@ body{
 }
 
 /* Home Section */
-#home {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+#home-1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+  padding: 3rem 9.5rem;
+  background-color: #E5E7EB;
+  flex-wrap: wrap;
 }
 
-#home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url('./assets/backgrounds/home.gif') no-repeat center center/cover;
-  opacity: 0.5; 
-  z-index: -1;
+#home-1 img {
+  width: 500px;
+  height: auto;
+  border-radius: 1rem;
+  border: 6px solid #FFB347;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-#prof_headshot {
-  max-height: 300px;
-  width: 100%;
-  object-fit: contain;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+#home-1 div:nth-child(2) {
+  max-width: 1400px;
+  flex: 1;
 }
 
-.home-content-box {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  height: 100%;
-  display: flex;             
-  flex-direction: column;    
-  justify-content: center;    
-  text-align: justify; 
+#home-1 h1 {
+  font-size: 6rem;
+  color: #111827;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
-.custom-list {
-  padding-left: 1rem;
+#home-1 p {
+  font-size: 1.125rem;
+  color: #374151;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  line-height: 1.75;
 }
 
-.custom-list li {
-  margin-bottom: 0.5rem;
-  list-style-type: disc;
+#home-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 9.5rem;
+  background-color: #1E3A8A;
+  flex-wrap: wrap;
 }
 
-.icon-link {
-  color: #343a40;
-  transition: color 0.3s ease;
+#home-2 .custom-list {
+  list-style: disc;
+  flex: 1;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+#home-2 .custom-list li {
+  margin-top: 1.1rem;
+  font-size: 1.125rem;
+  color: white;
 }
 
-.icon-link:hover {
-  color: #ff8800;
+#home-2 div:last-child {
+  display: flex;
+  gap: 1rem;
 }
 
-.animate-slide-left,
-.animate-slide-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.6s ease-out;
+#home-2 div:last-child a {
+  color: #ffffff;
+  font-size: 4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.animate-slide-left {
-  transform: translateX(-50px);
+#home-2 div:last-child a:hover {
+  transform: scale(1.2);
+  color: #FFB347;
 }
 
-.animated {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
+@media (max-width: 991.98px) {
+  #home-1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  #home-1 img {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  #home-1 h1 {
+    font-size: 3.5rem;
+    margin-top: 0;
+  }
+
+  #home-1 p {
+    font-size: 1rem;
+  }
+
+  #home-2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #home-2 .custom-list {
+    margin: 0 0 2rem 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  #home-2 div:last-child {
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  #home-1 img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #home-1 h1 {
+    font-size: 2.5rem;
+  }
+
+  #home-2 div:last-child a {
+    font-size: 3rem;
+  }
 }
 
 /* Education Section */
