@@ -14,11 +14,11 @@
             <script src="./javascript/navbar.js" defer></script>
             <script src="./javascript/home.js" defer></script>
         </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
 
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#home-1">
                     <img src="./assets/dt_logo.png" alt="Logo" class="navbar-logo" />
                 </a>
 
@@ -75,95 +75,121 @@
             </div>
         </section>
 
-        <!-- <section id="home" class="py-5">
+        <section class="blank-section"></section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const cards = [
+                    {
+                        img: "/assets/esps.jpg",
+                        title: "Elementary School",
+                        subtitle: "Espiritu Santo Parochial School"
+                    },
+                    {
+                        img: "/assets/ust js.jpg",
+                        title: "Junior High School",
+                        subtitle: "UST - Junior High School"
+                    },
+                    {
+                        img: "/assets/ust shs.jpg",
+                        title: "Senior High School",
+                        subtitle: "UST - Senior High School"
+                    },
+                    {
+                        img: "/assets/ust cics.jpg",
+                        title: "College",
+                        subtitle: "UST - CICS"
+                    }
+                ];
+
+                const row = document.querySelector('#educationCarousel .row');
+                const visibleCount = 3;
+                let startIndex = 0;
+
+                function renderCards() {
+                    row.innerHTML = '';
+                    for (let i = 0; i < visibleCount; i++) {
+                        const index = (startIndex + i) % cards.length;
+                        const card = cards[index];
+                        const col = document.createElement('div');
+                        col.className = "col-md-4 mb-3";
+                        col.innerHTML = `
+                            <div class="card text-center">
+                            <img src="${card.img}" class="card-img-top" alt="${card.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${card.title}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">${card.subtitle}</h6>
+                            </div>
+                            </div>
+                        `;
+                        row.appendChild(col);
+                    }
+                }
+
+                renderCards();
+
+                document.getElementById('nextBtn').addEventListener('click', () => {
+                    startIndex = (startIndex + 1) % cards.length;
+                    renderCards();
+                });
+
+                document.getElementById('prevBtn').addEventListener('click', () => {
+                    startIndex = (startIndex - 1 + cards.length) % cards.length;
+                    renderCards();
+                });
+            });
+        </script>
+
+        <section id="education" class="py-5">
             <div class="container">
-                <div class="row d-flex align-items-stretch">
-
-                    <div class="col-md-4 text-center mb-4 mb-md-0 animate-slide-left">
-                        <img src="./assets/image_prof.jpg" id="prof_headshot" alt="Professional Headshot">
-                        <h3 class="mt-3 fw-bold">Daniel Andrei Tababa</h3>
-                        <p class="text-muted">Metro Manila, 1013</p>
-                        <div>
-                            <a href="mailto:danielandrei.tababa@gmail.com" target="_blank" class="icon-link me-3"><i class="fas fa-envelope fa-lg"></i></a>
-                            <a href="https://www.linkedin.com/in/daniel-andrei-tababa" target="_blank" class="icon-link me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                            <a href="https://github.com/dan123-byte" target="_blank" class="icon-link"><i class="fab fa-github fa-lg"></i></a>
+                <div id="educationCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <div class="row flex-nowrap overflow-hidden">
+                            <div class="col-md-4 mb-3">
+                            <div class="card text-center">
+                                <img src="/assets/esps.jpg" class="card-img-top" alt="ESPS">
+                                <div class="card-body">
+                                <h5 class="card-title">Elementary School</h5>
+                                <h6 class="card-subtitle mb-2">Espiritu Santo Parochial School</h6>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                            <div class="card text-center">
+                                <img src="/assets/ust js.jpg" class="card-img-top" alt="UST-JHS">
+                                <div class="card-body">
+                                <h5 class="card-title">Junior High School</h5>
+                                <h6 class="card-subtitle mb-2">UST - Junior High School</h6>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                            <div class="card text-center">
+                                <img src="/assets/ust shs.jpg" class="card-img-top" alt="UST-SHS">
+                                <div class="card-body">
+                                <h5 class="card-title">Senior High School</h5>
+                                <h6 class="card-subtitle mb-2">UST - Senior High School</h6>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
-
-                     <div class="col-md-8 d-flex animate-slide-right">
-                        <div class="home-content-box w-100">
-                            <h4 class="fw-bold mb-3">About</h4>
-                            <p>
-                                Recent BS Information Technology graduate with hands-on experience in full stack web and mobile development,
-                                API integration, and quality assurance testing. Proficient in tools like FastAPI, Flutter, PostgreSQL, Odoo,
-                                and Python. Eager to contribute to a collaborative team and build scalable, high-quality applications.
-                            </p>
-
-                            <h4 class="fw-bold mt-4 mb-2">Interests</h4>
-                            <ul class="custom-list">
-                                <li>Passionate about improving my skills in HTML, CSS, Python, JavaScript and other related technologies</li>
-                                <li>Follow current trends and innovations in the console gaming industry</li>
-                                <li>Enjoys collecting travel keychains and spending time with family during weekends and vacations.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-
-        <section id="education" class="d-flex">
-            <div class="timeline-container">
-                <h2 class="timeline-title">My Education</h2>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Espiritu Santo Parochial School</h3>
-                        <p>📘 Elementary</p>
-                        <p>📍 1912 Rizal Avenue, Sta. Cruz, Manila</p>
-                    </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>UST Junior High School</h3>
-                        <p>📗 Junior High</p>
-                        <p>📍 Benavides Building, UST, Manila</p>
-                    </div>
+                <button class="carousel-control-prev" type="button" id="prevBtn">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" id="nextBtn">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>UST Senior High School</h3>
-                        <p>📙 Senior High - STEM Track</p>
-                        <p>📍 España Blvd, UST, Manila</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>UST College of Information and Computing Sciences</h3>
-                        <p>📘 College - BS Information Technology</p>
-                        <p>📍 España Blvd, UST, Manila</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/d/embed?mid=1yFLpD9xFmrT90fMnb0oH0hcoCov1UvM&ehbc=2E312F"
-                    width="100%"
-                    height="100%"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
             </div>
         </section>
+
+        <section class="blank-section"></section>
 
         <section id="technical-skills">
             <div class="skills-content">
@@ -235,7 +261,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="projects">
             <!-- To be filled and created using cards -->
              <h2>Projects</h2>
