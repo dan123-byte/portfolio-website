@@ -18,20 +18,20 @@ This document defines the **color palette and typography** for my personal portf
 
 ## 🔤 Typography
 
-- **Headings (H1–H3):**  
-  - Font: *Poppins, sans-serif*  
-  - Style: Bold, modern, high contrast  
-  - Color: Navy Blue `#1A2B4C`  
+- **Headings (H1–H3):**
+  - Font: *Poppins, sans-serif*
+  - Style: Bold, modern, high contrast
+  - Color: Navy Blue `#1A2B4C`
 
-- **Body Text:**  
-  - Font: *Roboto, sans-serif*  
-  - Style: Regular, highly readable  
-  - Color: Charcoal `#2C2C2C`  
+- **Body Text:**
+  - Font: *Roboto, sans-serif*
+  - Style: Regular, highly readable
+  - Color: Charcoal `#2C2C2C`
 
-- **Links & Buttons:**  
-  - Font: *Poppins, sans-serif*  
-  - Style: Medium weight  
-  - Default Color: Pastel Orange `#FFB347`  
-  - Hover Color: Navy Blue `#1A2B4C`  
+- **Links & Buttons:**
+  - Font: *Poppins, sans-serif*
+  - Style: Medium weight
+  - Default Color: Pastel Orange `#FFB347`
+  - Hover Color: Navy Blue `#1A2B4C`
 
 ---

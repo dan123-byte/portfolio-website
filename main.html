@@ -11,8 +11,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-            <script src="./javascript/navbar.js" defer></script>
-            <script src="./javascript/home.js" defer></script>
+            <script src="javascript/main.js"></script>
         </head>
     <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
 
@@ -77,69 +76,6 @@
 
         <section class="blank-section"></section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const cards = [
-                    {
-                        img: "/assets/esps.jpg",
-                        title: "Elementary School",
-                        subtitle: "Espiritu Santo Parochial School"
-                    },
-                    {
-                        img: "/assets/ust js.jpg",
-                        title: "Junior High School",
-                        subtitle: "UST - Junior High School"
-                    },
-                    {
-                        img: "/assets/ust shs.jpg",
-                        title: "Senior High School",
-                        subtitle: "UST - Senior High School"
-                    },
-                    {
-                        img: "/assets/ust cics.jpg",
-                        title: "College",
-                        subtitle: "UST - CICS"
-                    }
-                ];
-
-                const row = document.querySelector('#educationCarousel .row');
-                const visibleCount = 3;
-                let startIndex = 0;
-
-                function renderCards() {
-                    row.innerHTML = '';
-                    for (let i = 0; i < visibleCount; i++) {
-                        const index = (startIndex + i) % cards.length;
-                        const card = cards[index];
-                        const col = document.createElement('div');
-                        col.className = "col-md-4 mb-3";
-                        col.innerHTML = `
-                            <div class="card text-center">
-                            <img src="${card.img}" class="card-img-top" alt="${card.title}">
-                            <div class="card-body">
-                                <h5 class="card-title">${card.title}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">${card.subtitle}</h6>
-                            </div>
-                            </div>
-                        `;
-                        row.appendChild(col);
-                    }
-                }
-
-                renderCards();
-
-                document.getElementById('nextBtn').addEventListener('click', () => {
-                    startIndex = (startIndex + 1) % cards.length;
-                    renderCards();
-                });
-
-                document.getElementById('prevBtn').addEventListener('click', () => {
-                    startIndex = (startIndex - 1 + cards.length) % cards.length;
-                    renderCards();
-                });
-            });
-        </script>
-
         <section id="education" class="py-5">
             <div class="container">
                 <div id="educationCarousel" class="carousel slide">
@@ -191,7 +127,38 @@
 
         <section class="blank-section"></section>
 
-        <section id="technical-skills">
+        <section id="projects">
+            <div id="project-cards">
+                <div class="card">
+                    <h3>Aug 2023 – Apr 2024</h3>
+                    <h4>Content Management System and Feedback Acquisition</h4>
+                    <h5>Quality Assurance</h5>
+                    <img src="/assets/se.png" alt="">
+                    <button class="arrow-btn" >▼</button>
+                </div>
+                <div class="card">
+                    <h3>Jun 2024 – Dec 2024</h3>
+                    <h4>Website for Petition Class Information System</h4>
+                    <h5>Quality Assurance</h5>
+                    <img src="/assets/capstone.png" alt="">
+                    <button class="arrow-btn">▼</button>
+                </div>
+                <div class="card">
+                    <h3>Jan 2025 – May 2025</h3>
+                    <h4>School Management System – Full Stack Intern Work</h4>
+                    <h5>Cerebro - IT Intern (Hybrid)</h5>
+                    <img src="/assets/web icon.png" alt="">
+                    <button class="arrow-btn">▼</button>
+                </div>
+            </div>
+
+            <div id="project-details">
+                <h3>Project Involvement</h3>
+                <p>Click the button arrow to see my involvement in the project</p>
+            </div>
+        </section>
+
+        <!-- <section id="technical-skills">
             <div class="skills-content">
                 <h2 class="tech_label">Technical Skills</h2>
 
@@ -260,17 +227,7 @@
                 </div>
                 </div>
             </div>
-        </section>
-
-        <section id="projects">
-            <!-- To be filled and created using cards -->
-             <h2>Projects</h2>
-        </section>
-
-        <section id="certificates">
-            <!-- To be filled and created using cards -->
-             <h2>Certificates</h2>
-        </section>
+        </section> -->
 
         <footer>
             <p>&copy; 2025 Daniel Andrei Tababa. All rights reserved.</p>
