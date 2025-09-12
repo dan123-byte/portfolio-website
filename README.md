@@ -3,7 +3,7 @@
 This repository contains my personal resume website, built with **HTML, CSS and JavaScript**.
 It serves as an online version of my resume and will also act as a portfolio hub where I can showcase my future projects.
 
-🌐 **Live Demo (GitHub Pages link will go here once deployed)**
+🌐 **Live Demo: https://dan123-byte.github.io/portfolio-website/index.html **
 
 ---
 
