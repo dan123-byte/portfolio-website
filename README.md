@@ -30,7 +30,7 @@ It serves as an online version of my resume and will also act as a portfolio hub
 ---
 
 ## 🛠️ Technologies Used
-- **HTML5*
+- **HTML5**
 - **CSS3**
 - **JavaScript**
 ---
