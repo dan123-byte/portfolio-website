@@ -13,6 +13,8 @@
 /* Body Section */
 body{
     font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Blank Sections */
@@ -106,7 +108,41 @@ body{
 
 @media (max-width: 991.98px) {
   .navbar-nav .nav-item {
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideIn 0.4s ease forwards;
+  }
+
+  .navbar-nav .nav-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .navbar-nav .nav-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .navbar-nav .nav-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .navbar-nav .nav-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .navbar-nav .nav-item a {
+    display: block;
+    color: var(--text-color, white);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar-nav .nav-item a:hover {
+    color: var(--second-orange);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -200,13 +236,14 @@ body{
   }
 
   #home-1 img {
-    width: 300px;
+    width: 350px;
     margin-bottom: 0;
   }
 
   #home-1 h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-top: 0;
+    font-weight: bold;
   }
 
   #home-1 p {
@@ -219,14 +256,15 @@ body{
   }
 
   #home-2 .custom-list {
-    margin: 0 0 2rem 0;
+    margin: 0 0 3rem 0;
     padding-left: 0;
     list-style-position: inside;
+    max-width: 800px;
   }
 
   #home-2 div:last-child {
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     width: 100%;
   }
 }
@@ -235,11 +273,12 @@ body{
 @media (max-width: 575.98px) {
   #home-1 img {
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
   }
 
   #home-1 h1 {
     font-size: 2.5rem;
+    font-weight: bold;
   }
 
   #home-2 div:last-child a {
@@ -645,7 +684,7 @@ body{
     width: 250px;
     height: 250px;
     margin-top: 60px;
-    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   #infoPanel {
@@ -653,8 +692,8 @@ body{
     transform: none !important;
     width: 90% !important;
     padding: 15px;
-    margin-top: 60px;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   #infoPanel.left .icons-container,
