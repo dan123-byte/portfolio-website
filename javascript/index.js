@@ -2,24 +2,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = [
         {
-            img: "/assets/esps.jpg",
+            img: "assets/esps.jpg",
             title: "Elementary School",
-            subtitle: "Espiritu Santo Parochial School"
+            subtitle: "Espiritu Santo Parochial School",
+            loading: "lazy"
         },
         {
-            img: "/assets/ust js.jpg",
+            img: "assets/ust js.jpg",
             title: "Junior High School",
-            subtitle: "UST - Junior High School"
+            subtitle: "UST - Junior High School",
+            loading: "lazy"
         },
         {
-            img: "/assets/ust shs.jpg",
+            img: "assets/ust shs.jpg",
             title: "Senior High School",
-            subtitle: "UST - Senior High School"
+            subtitle: "UST - Senior High School",
+            loading: "lazy"
         },
         {
-            img: "/assets/ust cics.jpg",
+            img: "assets/ust cics.jpg",
             title: "College",
-            subtitle: "UST - CICS"
+            subtitle: "UST - CICS",
+            loading: "lazy"
         }
     ];
 
