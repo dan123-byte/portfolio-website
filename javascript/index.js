@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loading: "lazy"
         },
         {
-            img: "assets/ust js.jpg",
+            img: "assets/ust _s.jpg",
             title: "Junior High School",
             subtitle: "UST - Junior High School",
             loading: "lazy"
