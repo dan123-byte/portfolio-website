@@ -157,12 +157,46 @@ body{
   flex-wrap: wrap;
 }
 
+#home-1 {
+  position: relative;
+  display: flex;
+}
+
 #home-1 img {
-  width: 500px;
+  width: 400px;
   height: auto;
   border-radius: 1rem;
-  border: 6px solid var(--second-orange);
+  border: 6px solid transparent;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background:
+    linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(
+      90deg,
+      var(--second-orange) 0 10px,
+      transparent 10px 20px
+    ) border-box;
+  animation: waveBorder 3s infinite alternate ease-in-out;
+}
+
+@keyframes waveBorder {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  20% {
+    background-position: 0 0, 12px 6px;
+  }
+  40% {
+    background-position: 0 0, 25px -4px;
+  }
+  60% {
+    background-position: 0 0, 18px 8px;
+  }
+  80% {
+    background-position: 0 0, 35px -6px;
+  }
+  100% {
+    background-position: 0 0, 40px 0;
+  }
 }
 
 #home-1 div:nth-child(2) {
@@ -594,6 +628,7 @@ body{
   left: 50%;
   transform: translate(-100%, -50%);
 }
+
 #infoPanel.right {
   right: 50%;
   transform: translate(100%, -50%);
