@@ -8,19 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
             loading: "lazy"
         },
         {
-            img: "assets/ust _s.jpg",
+            img: "assets/ust_js.jpg",
             title: "Junior High School",
             subtitle: "UST - Junior High School",
             loading: "lazy"
         },
         {
-            img: "assets/ust shs.jpg",
+            img: "assets/ust_shs.jpg",
             title: "Senior High School",
             subtitle: "UST - Senior High School",
             loading: "lazy"
         },
         {
-            img: "assets/ust cics.jpg",
+            img: "assets/ust_cics.jpg",
             title: "College",
             subtitle: "UST - CICS",
             loading: "lazy"
