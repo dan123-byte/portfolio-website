@@ -461,6 +461,9 @@ body{
 }
 
 #project-cards .card {
+  width: auto;
+  height: 15rem;
+
   background: var(--first-navy);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
