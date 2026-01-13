@@ -87,15 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Skills Menu - Shapes
-const items = document.querySelectorAll(".circle-menu h6");
-const panel = document.getElementById("infoPanel");
-
+// Skills Menu
 const icons = {
   "Development Tools": [
     '<div class="icon-item" data-name="VS Code"><img src="assets/icons/vs.png" alt="VS Code"></div>',
     '<div class="icon-item" data-name="Android Studio"><img src="assets/icons/as.png" alt="Android Studio"></div>',
-    '<div class="icon-item" data-name="pgAdmin 4"><img src="assets/icons/pgadmin.png" alt="pgAdmin 4"></div>'
   ],
   "Programming Languages": [
     '<div class="icon-item" data-name="Python"><img src="assets/icons/py.png" alt="Python"></div>',
@@ -103,16 +99,19 @@ const icons = {
     '<div class="icon-item" data-name="JavaScript"><img src="assets/icons/js.png" alt="JavaScript"></div>',
     '<div class="icon-item" data-name="HTML"><img src="assets/icons/html.png" alt="HTML"></div>',
     '<div class="icon-item" data-name="CSS"><img src="assets/icons/css.png" alt="CSS"></div>',
-    '<div class="icon-item" data-name="XML"><img src="assets/icons/xml.png" alt="XML"></div>'
+    '<div class="icon-item" data-name="XML"><img src="assets/icons/xml.png" alt="XML"></div>',
+    '<div class="icon-item" data-name="Ruby"><img src="assets/icons/ruby.png" alt="Ruby"></div>'
   ],
   "Frameworks": [
     '<div class="icon-item" data-name="Flutter"><img src="assets/icons/flutter.png" alt="Flutter"></div>',
     '<div class="icon-item" data-name="FastAPI"><img src="assets/icons/fa.png" alt="FastAPI"></div>',
     '<div class="icon-item" data-name="Odoo"><img src="assets/icons/odoo.png" alt="Odoo"></div>',
-    '<div class="icon-item" data-name="React"><img src="assets/icons/react.png" alt="React"></div>'
+    '<div class="icon-item" data-name="React"><img src="assets/icons/react.png" alt="React"></div>',
+    '<div class="icon-item" data-name="WordPress"><img src="assets/icons/wp.png" alt="WordPress"></div>'
   ],
   "Databases": [
-    '<div class="icon-item" data-name="PostgreSQL"><img src="assets/icons/postgresql.png" alt="PostgreSQL"></div>'
+    '<div class="icon-item" data-name="PostgreSQL"><img src="assets/icons/postgresql.png" alt="PostgreSQL"></div>',
+    '<div class="icon-item" data-name="Firebase"><img src="assets/icons/fb.png" alt="Firebase"></div>'
   ],
   "Version Control": [
     '<div class="icon-item" data-name="Git"><img src="assets/icons/git.png" alt="Git"></div>',
@@ -127,23 +126,17 @@ const icons = {
   ]
 };
 
-items.forEach(item => {
-  item.addEventListener("click", () => {
-    const side = item.dataset.side;
-    panel.style.display = "block";
+const headings = document.querySelectorAll('.technical-menu h6');
+const panel = document.getElementById('icons-panel');
 
-    const iconSet = (icons[item.textContent] || []).join("");
+headings.forEach(h6 => {
+  h6.addEventListener('click', () => {
+    const category = h6.dataset.category;
 
-    panel.classList.remove("left", "right");
-    panel.classList.add(side);
-
-    panel.innerHTML = `
-      <div class="icons-container">
-        <div class="icon-grid">
-          ${iconSet}
-        </div>
-      </div>
-    `;
+    if (icons[category]) {
+      panel.innerHTML = icons[category].join('');
+      panel.style.display = 'grid';
+    }
   });
 });
 
