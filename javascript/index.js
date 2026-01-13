@@ -139,13 +139,3 @@ headings.forEach(h6 => {
     }
   });
 });
-
-// Highlight Selected
-const menuItems = document.querySelectorAll('.circle-menu h6');
-
-menuItems.forEach(item => {
-  item.addEventListener('click', () => {
-    menuItems.forEach(i => i.classList.remove('active'));
-    item.classList.add('active');
-  });
-});
