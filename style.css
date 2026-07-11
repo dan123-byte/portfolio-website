@@ -569,90 +569,68 @@ body{
 }
 
 /* Technical Skills Section */
-#technical-skills {
-  background-color: var(--first-navy);
-  padding: 60px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
+#technical-skills{
+    background:var(--first-navy);
+    padding:60px;
 }
 
-.technical-menu {
-  width: 250px;
-  background: var(--first-navy);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 24px 20px 24px 45px;
-  gap: 10px;
-  border-radius: 8px;
-  flex-shrink: 0;
+.skills-container{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
 }
 
-.technical-menu h6 {
-  color: white;
-  font-size: 24px;
-  margin: 0;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s;
+.skills-selector{
+    width:260px;
 }
 
-.technical-menu h6:hover {
-  color: var(--second-orange);
+#skill-category{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    color:white;
+    background:#162844;
+    border:2px solid var(--second-orange);
+    border-radius:12px;
+    cursor:pointer;
+    outline:none;
 }
 
-#icons-panel {
-  display: none;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  flex-grow: 1;
-  min-width: 300px;
+#skill-category option{
+    background:#162844;
+    color:white;
 }
 
-.icon-item {
-  position: relative;
+#icons-panel{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(90px,1fr));
+    gap:20px;
+    padding:30px;
+    background:white;
+    border-radius:15px;
+    min-height:250px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.icon-item::after {
-  content: attr(data-name);
-  position: absolute;
-  bottom: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #000;
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.icon-item{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:90px;
+    border-radius:12px;
+    transition:.3s;
+    cursor:pointer;
 }
 
-.icon-item:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(2px);
+.icon-item:hover{
+    background:#f4f4f4;
+    transform:translateY(-4px);
 }
 
-
-.icon-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.icon-item img:hover {
-  transform: scale(1.1);
+.icon-item img{
+    width:55px;
+    height:55px;
 }
 
 /* Footer Section */

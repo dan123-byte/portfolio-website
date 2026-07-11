@@ -23,7 +23,6 @@ It serves as an online version of my resume and will also act as a portfolio hub
 - Add **personal projects** using project cards (with descriptions, GitHub links, and live demos)
 - Create a **Certificates section** to highlight achievements
 - Add a **Contact section** (contact form)
-- Deploy the website on **GitHub Pages** for easy access
 - Future enhancement: Dark/Light mode toggle and animations for interactivity
 - Potential upgrade into a **ReactJS single-page app**
 

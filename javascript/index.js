@@ -78,6 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `I developed a multi-page automobile product website using WordPress, creating key pages such as Home, Products, About Us, Contact Us, and Location, while customizing themes and plugins to ensure a clean layout, intuitive navigation, and easy content management.`,
 
     `I maintained and enhanced internal and product systems, adding over four new features and improving existing functionalities using React on the frontend and Ruby on the backend, while collaborating with the team to troubleshoot issues and optimize overall system performance.`,
+
+    `I developed and maintained over 30 RESTful API endpoints using Node.js for a location-based AR game, supporting authentication, gameplay, and in-game transactions. I managed PostgreSQL database integration, deployed backend services on Google Cloud Platform (GCP), implemented Redis caching to improve performance, documented APIs using Swagger, performed API testing with Postman, and collaborated with frontend developers to ensure seamless system integration and scalability for 500–1,000 concurrent users.`,
   ];
 
   document.querySelectorAll(".arrow-btn").forEach((button, index) => {
@@ -93,6 +95,7 @@ const icons = {
     '<div class="icon-item" data-name="VS Code"><img src="assets/icons/vs.png" alt="VS Code"></div>',
     '<div class="icon-item" data-name="Android Studio"><img src="assets/icons/as.png" alt="Android Studio"></div>',
   ],
+
   "Programming Languages": [
     '<div class="icon-item" data-name="Python"><img src="assets/icons/py.png" alt="Python"></div>',
     '<div class="icon-item" data-name="SQL"><img src="assets/icons/sql.png" alt="SQL"></div>',
@@ -102,40 +105,66 @@ const icons = {
     '<div class="icon-item" data-name="XML"><img src="assets/icons/xml.png" alt="XML"></div>',
     '<div class="icon-item" data-name="Ruby"><img src="assets/icons/ruby.png" alt="Ruby"></div>'
   ],
+
   "Frameworks": [
     '<div class="icon-item" data-name="Flutter"><img src="assets/icons/flutter.png" alt="Flutter"></div>',
     '<div class="icon-item" data-name="FastAPI"><img src="assets/icons/fa.png" alt="FastAPI"></div>',
     '<div class="icon-item" data-name="Odoo"><img src="assets/icons/odoo.png" alt="Odoo"></div>',
     '<div class="icon-item" data-name="React"><img src="assets/icons/react.png" alt="React"></div>',
+    '<div class="icon-item" data-name="Node.js"><img src="assets/icons/nodejs.png" alt="Node.js"></div>',
     '<div class="icon-item" data-name="WordPress"><img src="assets/icons/wp.png" alt="WordPress"></div>'
   ],
+
+  "Cloud & Server": [
+    '<div class="icon-item" data-name="Google Cloud Platform"><img src="assets/icons/gcp.png" alt="Google Cloud Platform"></div>',
+    '<div class="icon-item" data-name="Google Cloud Storage"><img src="assets/icons/gcs.png" alt="Google Cloud Storage"></div>',
+    '<div class="icon-item" data-name="Redis"><img src="assets/icons/redis.png" alt="Redis"></div>'
+  ],
+
+  "API Development": [
+    '<div class="icon-item" data-name="REST API"><img src="assets/icons/restapi.png" alt="REST API"></div>',
+    '<div class="icon-item" data-name="Swagger"><img src="assets/icons/swagger.png" alt="Swagger"></div>',
+    '<div class="icon-item" data-name="JSON"><img src="assets/icons/json.png" alt="JSON"></div>'
+  ],
+
   "Databases": [
     '<div class="icon-item" data-name="PostgreSQL"><img src="assets/icons/postgresql.png" alt="PostgreSQL"></div>',
     '<div class="icon-item" data-name="Firebase"><img src="assets/icons/fb.png" alt="Firebase"></div>'
   ],
+
   "Version Control": [
     '<div class="icon-item" data-name="Git"><img src="assets/icons/git.png" alt="Git"></div>',
     '<div class="icon-item" data-name="GitHub"><img src="assets/icons/github.png" alt="GitHub"></div>'
   ],
-  "Testing Tools": [
+
+  "CI/CD": [
+    '<div class="icon-item" data-name="GitHub Actions"><img src="assets/icons/github-actions.png" alt="GitHub Actions"></div>'
+  ],
+
+  "Testing & Monitoring": [
+    '<div class="icon-item" data-name="Jest"><img src="assets/icons/jest.png" alt="Jest"></div>',
+    '<div class="icon-item" data-name="Apache JMeter"><img src="assets/icons/apache.png" alt="Apache JMeter"></div>',
+    '<div class="icon-item" data-name="k6"><img src="assets/icons/k6.png" alt="k6"></div>',
     '<div class="icon-item" data-name="sqlmap"><img src="assets/icons/sqlmap.png" alt="sqlmap"></div>',
-    '<div class="icon-item" data-name="Apache Jmeter"><img src="assets/icons/apache.png" alt="Apache Jmeter"></div>',
-    '<div class="icon-item" data-name="Open SSL"><img src="assets/icons/open.png" alt="Open SSL"></div>',
-    '<div class="icon-item" data-name="Oracle VirtualBox"><img src="assets/icons/ovb.png" alt="Oracle VirtualBox"></div>',
-    '<div class="icon-item" data-name="UptimeRobot"><img src="assets/icons/uptimerobot.png" alt="UptimeRobot"></div>'
+    '<div class="icon-item" data-name="OpenSSL"><img src="assets/icons/open.png" alt="OpenSSL"></div>',
+    '<div class="icon-item" data-name="UptimeRobot"><img src="assets/icons/uptimerobot.png" alt="UptimeRobot"></div>',
+    '<div class="icon-item" data-name="Postman"><img src="assets/icons/postman.png" alt="Postman"></div>'
+  ],
+
+  "Virtualization": [
+    '<div class="icon-item" data-name="Oracle VirtualBox"><img src="assets/icons/ovb.png" alt="Oracle VirtualBox"></div>'
   ]
 };
 
-const headings = document.querySelectorAll('.technical-menu h6');
-const panel = document.getElementById('icons-panel');
+const selector = document.getElementById("skill-category");
+const panel = document.getElementById("icons-panel");
 
-headings.forEach(h6 => {
-  h6.addEventListener('click', () => {
-    const category = h6.dataset.category;
+function loadCategory(category){
+    panel.innerHTML = icons[category].join("");
+}
 
-    if (icons[category]) {
-      panel.innerHTML = icons[category].join('');
-      panel.style.display = 'grid';
-    }
-  });
+loadCategory("Development Tools");
+
+selector.addEventListener("change",function(){
+    loadCategory(this.value);
 });
