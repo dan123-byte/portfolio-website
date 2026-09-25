@@ -168,3 +168,15 @@ loadCategory("Development Tools");
 selector.addEventListener("change",function(){
     loadCategory(this.value);
 });
+
+function preloadSkillIcons() {
+    Object.values(icons).flat().forEach((htmlString) => {
+        const match = htmlString.match(/src="([^"]+)"/);
+        if (match && match[1]) {
+            const img = new Image();
+            img.src = match[1];
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", preloadSkillIcons);
