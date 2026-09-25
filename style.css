@@ -613,24 +613,67 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.icon-item{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:90px;
-    border-radius:12px;
-    transition:.3s;
-    cursor:pointer;
+.icon-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.icon-item:hover{
-    background:#f4f4f4;
-    transform:translateY(-4px);
+.icon-item:hover {
+    background: #f4f4f4;
+    transform: translateY(-4px);
 }
 
-.icon-item img{
-    width:55px;
-    height:55px;
+.icon-item::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--first-navy, #162844);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.icon-item::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent var(--first-navy, #162844) transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.icon-item:hover::after,
+.icon-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-item img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 /* Footer Section */
