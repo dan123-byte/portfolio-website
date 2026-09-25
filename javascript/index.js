@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `I maintained and enhanced internal and product systems, adding over four new features and improving existing functionalities using React on the frontend and Ruby on the backend, while collaborating with the team to troubleshoot issues and optimize overall system performance.`,
 
     `I developed and maintained over 30 RESTful API endpoints using Node.js for a location-based AR game, supporting authentication, gameplay, and in-game transactions. I managed PostgreSQL database integration, deployed backend services on Google Cloud Platform (GCP), implemented Redis caching to improve performance, documented APIs using Swagger, performed API testing with Postman, and collaborated with frontend developers to ensure seamless system integration and scalability for 500–1,000 concurrent users.`,
+
+    `I developed and contributed to the migration of a sales outreach platform supporting cold calling, email outreach, lead management, and contact tracking. Built reusable React and TypeScript components, integrated RESTful APIs, resolved UI/API bugs, and collaborated with cross-functional teams to ensure seamless feature validation and performance.`
   ];
 
   document.querySelectorAll(".arrow-btn").forEach((button, index) => {
