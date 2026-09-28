@@ -1,11 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
     const [activeSection, setActiveSection] = useState("home-1");
 
-    const handleNavClick = (section) => {
-        setActiveSection(section);
-    };
+    useEffect(() => {
+        const sections = document.querySelectorAll(
+            "#home-1, #education, #projects, #technical-skills"
+        );
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: "-30% 0px -60% 0px",
+                threshold: 0,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
@@ -15,7 +37,6 @@ function Navbar() {
                 <a
                     className="navbar-brand d-flex align-items-center gap-2"
                     href="#home-1"
-                    onClick={() => handleNavClick("home-1")}
                 >
                     <img
                         src="/portfolio-website/assets/dt_logo.png"
@@ -52,9 +73,6 @@ function Navbar() {
                                         : ""
                                 }`}
                                 href="#home-1"
-                                onClick={() =>
-                                    handleNavClick("home-1")
-                                }
                             >
                                 Home
                             </a>
@@ -68,9 +86,6 @@ function Navbar() {
                                         : ""
                                 }`}
                                 href="#education"
-                                onClick={() =>
-                                    handleNavClick("education")
-                                }
                             >
                                 Education
                             </a>
@@ -84,9 +99,6 @@ function Navbar() {
                                         : ""
                                 }`}
                                 href="#projects"
-                                onClick={() =>
-                                    handleNavClick("projects")
-                                }
                             >
                                 Projects
                             </a>
@@ -100,9 +112,6 @@ function Navbar() {
                                         : ""
                                 }`}
                                 href="#technical-skills"
-                                onClick={() =>
-                                    handleNavClick("technical-skills")
-                                }
                             >
                                 Skills
                             </a>
