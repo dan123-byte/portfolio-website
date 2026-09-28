@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Projects() {
     const projects = [
         {
@@ -75,13 +77,29 @@ function Projects() {
         },
     ];
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextProjects = () => {
+        if (currentIndex < projects.length - 2) {
+            setCurrentIndex((prev) => prev + 1);
+        }
+    };
+
+    const previousProjects = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex((prev) => prev - 1);
+        }
+    };
+
     return (
         <section id="projects">
             <div className="container projects-container">
 
                 {/* Section Header */}
                 <div className="projects-header">
-                    <span className="section-label">SELECTED WORK</span>
+                    <span className="section-label">
+                        SELECTED WORK
+                    </span>
 
                     <h2>Projects</h2>
 
@@ -92,46 +110,101 @@ function Projects() {
                     </p>
                 </div>
 
-                {/* Projects */}
-                <div className="projects-grid">
-                    {projects.map((project, index) => (
-                        <article
-                            className="project-card"
-                            key={project.title}
+                {/* Carousel */}
+                <div className="projects-carousel">
+
+                    {/* Previous Button */}
+                    <button
+                        className="carousel-button carousel-prev"
+                        onClick={previousProjects}
+                        disabled={currentIndex === 0}
+                        aria-label="Previous projects"
+                    >
+                        &#8592;
+                    </button>
+
+                    {/* Viewport */}
+                    <div className="projects-viewport">
+                        <div
+                            className="projects-grid"
+                            style={{
+                                "--current-index": currentIndex,
+                            }}
                         >
-                            <div className="project-top">
-                                <span className="project-number">
-                                    {String(index + 1).padStart(2, "0")}
-                                </span>
-
-                                <span className="project-date">
-                                    {project.date}
-                                </span>
-                            </div>
-
-                            <div className="project-content">
-                                <h3>{project.title}</h3>
-
-                                <p className="project-role">
-                                    {project.role}
-                                </p>
-
-                                <p className="project-description">
-                                    {project.description}
-                                </p>
-
-                                <div className="project-technologies">
-                                    {project.technologies.map((technology) => (
-                                        <span
-                                            className="technology-tag"
-                                            key={technology}
-                                        >
-                                            {technology}
+                            {projects.map((project, index) => (
+                                <article
+                                    className="project-card"
+                                    key={project.title}
+                                >
+                                    <div className="project-top">
+                                        <span className="project-number">
+                                            {String(index + 1).padStart(2, "0")}
                                         </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </article>
+
+                                        <span className="project-date">
+                                            {project.date}
+                                        </span>
+                                    </div>
+
+                                    <div className="project-content">
+                                        <h3>{project.title}</h3>
+
+                                        <p className="project-role">
+                                            {project.role}
+                                        </p>
+
+                                        <p className="project-description">
+                                            {project.description}
+                                        </p>
+
+                                        <div className="project-technologies">
+                                            {project.technologies.map(
+                                                (technology) => (
+                                                    <span
+                                                        className="technology-tag"
+                                                        key={technology}
+                                                    >
+                                                        {technology}
+                                                    </span>
+                                                )
+                                            )}
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Next Button */}
+                    <button
+                        className="carousel-button carousel-next"
+                        onClick={nextProjects}
+                        disabled={
+                            currentIndex >= projects.length - 2
+                        }
+                        aria-label="Next projects"
+                    >
+                        &#8594;
+                    </button>
+                </div>
+
+                {/* Carousel Indicators */}
+                <div className="carousel-indicators">
+                    {Array.from({
+                        length: projects.length - 1,
+                    }).map((_, index) => (
+                        <button
+                            key={index}
+                            className={`carousel-dot ${
+                                currentIndex === index
+                                    ? "active"
+                                    : ""
+                            }`}
+                            onClick={() => setCurrentIndex(index)}
+                            aria-label={`Show projects ${
+                                index + 1
+                            } and ${index + 2}`}
+                        />
                     ))}
                 </div>
 

@@ -712,7 +712,6 @@ body {
     transition: width 0.3s ease;
 }
 
-
 /* =========================================================
    PROJECTS
 ========================================================= */
@@ -754,9 +753,7 @@ body {
     color: var(--first-navy);
 
     font-size: 0.75rem;
-
     font-weight: 700;
-
     letter-spacing: 2px;
 }
 
@@ -766,11 +763,8 @@ body {
     color: #0f172a;
 
     font-size: clamp(2.2rem, 4vw, 3.5rem);
-
     font-weight: 700;
-
     line-height: 1.05;
-
     letter-spacing: -0.03em;
 }
 
@@ -795,23 +789,54 @@ body {
     color: #64748b;
 
     font-size: 0.95rem;
-
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   PROJECT GRID
+   PROJECT CAROUSEL
+========================================================= */
+
+.projects-carousel {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CAROUSEL VIEWPORT
+========================================================= */
+
+.projects-viewport {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PROJECT TRACK
 ========================================================= */
 
 .projects-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
+    display: flex;
     gap: 24px;
-}
+    width: 100%;
 
+    transform: translateX(
+        calc(
+            var(--current-index) * -50% -
+            var(--current-index) * 12px
+        )
+    );
+
+    transition: transform 0.5s ease;
+}
 
 /* =========================================================
    PROJECT CARD
@@ -822,8 +847,11 @@ body {
 
     display: flex;
 
+    flex: 0 0 calc(50% - 12px);
+
     flex-direction: column;
 
+    min-width: 0;
     min-height: 100%;
 
     padding: 25px;
@@ -831,7 +859,6 @@ body {
     background: #ffffff;
 
     border: 1px solid #e2e8f0;
-
     border-radius: 16px;
 
     transition:
@@ -874,6 +901,8 @@ body {
     width: 40px;
     height: 40px;
 
+    flex-shrink: 0;
+
     border-radius: 50%;
 
     background: var(--first-navy);
@@ -881,7 +910,6 @@ body {
     color: #ffffff;
 
     font-size: 0.75rem;
-
     font-weight: 700;
 }
 
@@ -889,8 +917,9 @@ body {
     color: #64748b;
 
     font-size: 0.75rem;
-
     font-weight: 600;
+
+    text-align: right;
 }
 
 
@@ -898,15 +927,21 @@ body {
    PROJECT CONTENT
 ========================================================= */
 
+.project-content {
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
 .project-content h3 {
     margin-bottom: 7px;
 
     color: #0f172a;
 
     font-size: 1.25rem;
-
     font-weight: 700;
-
     line-height: 1.35;
 }
 
@@ -916,7 +951,6 @@ body {
     color: var(--first-navy);
 
     font-size: 0.85rem;
-
     font-weight: 600;
 }
 
@@ -926,7 +960,6 @@ body {
     color: #64748b;
 
     font-size: 0.9rem;
-
     line-height: 1.7;
 }
 
@@ -955,10 +988,105 @@ body {
     color: #475569;
 
     font-size: 0.7rem;
-
     font-weight: 600;
 }
 
+
+/* =========================================================
+   CAROUSEL BUTTONS
+========================================================= */
+
+.carousel-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--first-navy);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.carousel-button:hover:not(:disabled) {
+    background: var(--first-navy);
+
+    color: #ffffff;
+
+    border-color: var(--first-navy);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(30, 58, 138, 0.18);
+}
+
+.carousel-button:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   CAROUSEL INDICATORS
+========================================================= */
+
+.carousel-indicators {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #cbd5e1;
+
+    cursor: pointer;
+
+    transition:
+        width 0.25s ease,
+        background 0.25s ease;
+}
+
+.carousel-dot.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: var(--first-navy);
+}
 
 /* =========================================================
    TABLET
@@ -986,8 +1114,31 @@ body {
         height: 220px;
     }
 
+
+    /* Projects */
+
+    .projects-carousel {
+        gap: 12px;
+    }
+
     .projects-grid {
-        grid-template-columns: 1fr;
+        gap: 18px;
+
+        transform: translateX(
+            calc(
+                var(--current-index) * -50% -
+                var(--current-index) * 9px
+            )
+        );
+    }
+
+    .project-card {
+        flex: 0 0 calc(50% - 9px);
+    }
+
+    .carousel-button {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -1021,6 +1172,11 @@ body {
         font-size: 0.9rem;
     }
 
+
+    /* =====================================================
+       EDUCATION
+    ===================================================== */
+
     .education-cards {
         grid-template-columns: 1fr;
     }
@@ -1049,7 +1205,32 @@ body {
         height: 42px;
     }
 
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects-carousel {
+        gap: 8px;
+    }
+
+    .projects-viewport {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .projects-grid {
+        gap: 0;
+
+        /* One full card per slide */
+        transform: translateX(
+            calc(var(--current-index) * -100%)
+        );
+    }
+
     .project-card {
+        flex: 0 0 100%;
+
         padding: 22px;
     }
 
@@ -1060,7 +1241,25 @@ body {
 
         gap: 10px;
     }
+
+    .project-date {
+        text-align: left;
+    }
+
+    .carousel-button {
+        width: 36px;
+        height: 36px;
+
+        flex-shrink: 0;
+
+        font-size: 0.9rem;
+    }
+
+    .carousel-indicators {
+        margin-top: 20px;
+    }
 }
+
 /* =========================================================
    TECHNICAL SKILLS
 ========================================================= */
