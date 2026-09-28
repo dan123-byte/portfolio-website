@@ -5,166 +5,166 @@ function TechnicalSkills() {
         "Development Tools": [
             {
                 name: "VS Code",
-                image: "/assets/icons/vs.png",
+                image: "/portfolio-website/assets/icons/vs.png",
             },
             {
                 name: "Android Studio",
-                image: "/assets/icons/as.png",
+                image: "/portfolio-website/assets/icons/as.png",
             },
         ],
 
         "Programming Languages": [
             {
                 name: "Python",
-                image: "/assets/icons/py.png",
+                image: "/portfolio-website/assets/icons/py.png",
             },
             {
                 name: "SQL",
-                image: "/assets/icons/sql.png",
+                image: "/portfolio-website/assets/icons/sql.png",
             },
             {
                 name: "JavaScript",
-                image: "/assets/icons/js.png",
+                image: "/portfolio-website/assets/icons/js.png",
             },
             {
                 name: "HTML",
-                image: "/assets/icons/html.png",
+                image: "/portfolio-website/assets/icons/html.png",
             },
             {
                 name: "CSS",
-                image: "/assets/icons/css.png",
+                image: "/portfolio-website/assets/icons/css.png",
             },
             {
                 name: "XML",
-                image: "/assets/icons/xml.png",
+                image: "/portfolio-website/assets/icons/xml.png",
             },
             {
                 name: "Ruby",
-                image: "/assets/icons/ruby.png",
+                image: "/portfolio-website/assets/icons/ruby.png",
             },
         ],
 
         Frameworks: [
             {
                 name: "Flutter",
-                image: "/assets/icons/flutter.png",
+                image: "/portfolio-website/assets/icons/flutter.png",
             },
             {
                 name: "FastAPI",
-                image: "/assets/icons/fa.png",
+                image: "/portfolio-website/assets/icons/fa.png",
             },
             {
                 name: "Odoo",
-                image: "/assets/icons/odoo.png",
+                image: "/portfolio-website/assets/icons/odoo.png",
             },
             {
                 name: "React",
-                image: "/assets/icons/react.png",
+                image: "/portfolio-website/assets/icons/react.png",
             },
             {
                 name: "Node.js",
-                image: "/assets/icons/nodejs.png",
+                image: "/portfolio-website/assets/icons/nodejs.png",
             },
             {
                 name: "WordPress",
-                image: "/assets/icons/wp.png",
+                image: "/portfolio-website/assets/icons/wp.png",
             },
         ],
 
         "Cloud & Server": [
             {
                 name: "Google Cloud Platform",
-                image: "/assets/icons/gcp.png",
+                image: "/portfolio-website/assets/icons/gcp.png",
             },
             {
                 name: "Google Cloud Storage",
-                image: "/assets/icons/gcs.png",
+                image: "/portfolio-website/assets/icons/gcs.png",
             },
             {
                 name: "Redis",
-                image: "/assets/icons/redis.png",
+                image: "/portfolio-website/assets/icons/redis.png",
             },
         ],
 
         "API Development": [
             {
                 name: "REST API",
-                image: "/assets/icons/restapi.png",
+                image: "/portfolio-website/assets/icons/restapi.png",
             },
             {
                 name: "Swagger",
-                image: "/assets/icons/swagger.png",
+                image: "/portfolio-website/assets/icons/swagger.png",
             },
             {
                 name: "JSON",
-                image: "/assets/icons/json.png",
+                image: "/portfolio-website/assets/icons/json.png",
             },
         ],
 
         Databases: [
             {
                 name: "PostgreSQL",
-                image: "/assets/icons/postgresql.png",
+                image: "/portfolio-website/assets/icons/postgresql.png",
             },
             {
                 name: "Firebase",
-                image: "/assets/icons/fb.png",
+                image: "/portfolio-website/assets/icons/fb.png",
             },
         ],
 
         "Version Control": [
             {
                 name: "Git",
-                image: "/assets/icons/git.png",
+                image: "/portfolio-website/assets/icons/git.png",
             },
             {
                 name: "GitHub",
-                image: "/assets/icons/github.png",
+                image: "/portfolio-website/assets/icons/github.png",
             },
         ],
 
         "CI/CD": [
             {
                 name: "GitHub Actions",
-                image: "/assets/icons/github-actions.png",
+                image: "/portfolio-website/assets/icons/github-actions.png",
             },
         ],
 
         "Testing & Monitoring": [
             {
                 name: "Jest",
-                image: "/assets/icons/jest.png",
+                image: "/portfolio-website/assets/icons/jest.png",
             },
             {
                 name: "Apache JMeter",
-                image: "/assets/icons/apache.png",
+                image: "/portfolio-website/assets/icons/apache.png",
             },
             {
                 name: "k6",
-                image: "/assets/icons/k6.png",
+                image: "/portfolio-website/assets/icons/k6.png",
             },
             {
                 name: "sqlmap",
-                image: "/assets/icons/sqlmap.png",
+                image: "/portfolio-website/assets/icons/sqlmap.png",
             },
             {
                 name: "OpenSSL",
-                image: "/assets/icons/open.png",
+                image: "/portfolio-website/assets/icons/open.png",
             },
             {
                 name: "UptimeRobot",
-                image: "/assets/icons/uptimerobot.png",
+                image: "/portfolio-website/assets/icons/uptimerobot.png",
             },
             {
                 name: "Postman",
-                image: "/assets/icons/postman.png",
+                image: "/portfolio-website/assets/icons/postman.png",
             },
         ],
 
         Virtualization: [
             {
                 name: "Oracle VirtualBox",
-                image: "/assets/icons/ovb.png",
+                image: "/portfolio-website/assets/icons/ovb.png",
             },
         ],
     };

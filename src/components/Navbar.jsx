@@ -5,7 +5,7 @@ function Navbar() {
 
                 <a className="navbar-brand d-flex align-items-center gap-2" href="#home-1">
                     <img
-                        src="/assets/dt_logo.png"
+                        src="/portfolio-website/assets/dt_logo.png"
                         alt="Logo"
                         className="navbar-logo"
                         loading="lazy"

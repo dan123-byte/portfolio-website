@@ -3,7 +3,7 @@ function Footer() {
         <footer>
             <div className="left-footer">
                 <img
-                    src="/assets/footer_logo.png"
+                    src="/portfolio-website/assets/footer_logo.png"
                     alt="Footer Logo"
                     loading="lazy"
                 />

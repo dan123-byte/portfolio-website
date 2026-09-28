@@ -3,22 +3,22 @@ import { useState } from "react";
 function Education() {
     const cards = [
         {
-            img: "/assets/esps.jpg",
+            img: "/portfolio-website/assets/esps.jpg",
             title: "Elementary School",
             subtitle: "Espiritu Santo Parochial School",
         },
         {
-            img: "/assets/ust_js.jpg",
+            img: "/portfolio-website/assets/ust_js.jpg",
             title: "Junior High School",
             subtitle: "UST - Junior High School",
         },
         {
-            img: "/assets/ust_shs.jpg",
+            img: "/portfolio-website/assets/ust_shs.jpg",
             title: "Senior High School",
             subtitle: "UST - Senior High School",
         },
         {
-            img: "/assets/ust_cics.jpg",
+            img: "/portfolio-website/assets/ust_cics.jpg",
             title: "College",
             subtitle: "UST - CICS",
         },

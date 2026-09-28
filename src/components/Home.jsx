@@ -4,7 +4,7 @@ function Home() {
             <section id="home-1">
                 <div>
                     <img
-                        src="/assets/image_prof.jpg"
+                        src="/portfolio-website/assets/image_prof.jpg"
                         id="prof_headshot"
                         alt="Professional Headshot"
                         loading="lazy"

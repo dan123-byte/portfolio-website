@@ -2,25 +2,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = [
         {
-            img: "assets/esps.jpg",
+            img: "/portfolio-website/assets/esps.jpg",
             title: "Elementary School",
             subtitle: "Espiritu Santo Parochial School",
             loading: "lazy"
         },
         {
-            img: "assets/ust_js.jpg",
+            img: "/portfolio-website/assets/ust_js.jpg",
             title: "Junior High School",
             subtitle: "UST - Junior High School",
             loading: "lazy"
         },
         {
-            img: "assets/ust_shs.jpg",
+            img: "/portfolio-website/assets/ust_shs.jpg",
             title: "Senior High School",
             subtitle: "UST - Senior High School",
             loading: "lazy"
         },
         {
-            img: "assets/ust_cics.jpg",
+            img: "/portfolio-website/assets/ust_cics.jpg",
             title: "College",
             subtitle: "UST - CICS",
             loading: "lazy"
@@ -94,67 +94,67 @@ document.addEventListener("DOMContentLoaded", () => {
 // Skills Menu
 const icons = {
   "Development Tools": [
-    '<div class="icon-item" data-name="VS Code"><img src="assets/icons/vs.png" alt="VS Code"></div>',
-    '<div class="icon-item" data-name="Android Studio"><img src="assets/icons/as.png" alt="Android Studio"></div>',
+    '<div class="icon-item" data-name="VS Code"><img src="/portfolio-website/assets/icons/vs.png" alt="VS Code"></div>',
+    '<div class="icon-item" data-name="Android Studio"><img src="/portfolio-website/assets/icons/as.png" alt="Android Studio"></div>',
   ],
 
   "Programming Languages": [
-    '<div class="icon-item" data-name="Python"><img src="assets/icons/py.png" alt="Python"></div>',
-    '<div class="icon-item" data-name="SQL"><img src="assets/icons/sql.png" alt="SQL"></div>',
-    '<div class="icon-item" data-name="JavaScript"><img src="assets/icons/js.png" alt="JavaScript"></div>',
-    '<div class="icon-item" data-name="HTML"><img src="assets/icons/html.png" alt="HTML"></div>',
-    '<div class="icon-item" data-name="CSS"><img src="assets/icons/css.png" alt="CSS"></div>',
-    '<div class="icon-item" data-name="XML"><img src="assets/icons/xml.png" alt="XML"></div>',
-    '<div class="icon-item" data-name="Ruby"><img src="assets/icons/ruby.png" alt="Ruby"></div>'
+    '<div class="icon-item" data-name="Python"><img src="/portfolio-website/assets/icons/py.png" alt="Python"></div>',
+    '<div class="icon-item" data-name="SQL"><img src="/portfolio-website/assets/icons/sql.png" alt="SQL"></div>',
+    '<div class="icon-item" data-name="JavaScript"><img src="/portfolio-website/assets/icons/js.png" alt="JavaScript"></div>',
+    '<div class="icon-item" data-name="HTML"><img src="/portfolio-website/assets/icons/html.png" alt="HTML"></div>',
+    '<div class="icon-item" data-name="CSS"><img src="/portfolio-website/assets/icons/css.png" alt="CSS"></div>',
+    '<div class="icon-item" data-name="XML"><img src="/portfolio-website/assets/icons/xml.png" alt="XML"></div>',
+    '<div class="icon-item" data-name="Ruby"><img src="/portfolio-website/assets/icons/ruby.png" alt="Ruby"></div>'
   ],
 
   "Frameworks": [
-    '<div class="icon-item" data-name="Flutter"><img src="assets/icons/flutter.png" alt="Flutter"></div>',
-    '<div class="icon-item" data-name="FastAPI"><img src="assets/icons/fa.png" alt="FastAPI"></div>',
-    '<div class="icon-item" data-name="Odoo"><img src="assets/icons/odoo.png" alt="Odoo"></div>',
-    '<div class="icon-item" data-name="React"><img src="assets/icons/react.png" alt="React"></div>',
-    '<div class="icon-item" data-name="Node.js"><img src="assets/icons/nodejs.png" alt="Node.js"></div>',
-    '<div class="icon-item" data-name="WordPress"><img src="assets/icons/wp.png" alt="WordPress"></div>'
+    '<div class="icon-item" data-name="Flutter"><img src="/portfolio-website/assets/icons/flutter.png" alt="Flutter"></div>',
+    '<div class="icon-item" data-name="FastAPI"><img src="/portfolio-website/assets/icons/fa.png" alt="FastAPI"></div>',
+    '<div class="icon-item" data-name="Odoo"><img src="/portfolio-website/assets/icons/odoo.png" alt="Odoo"></div>',
+    '<div class="icon-item" data-name="React"><img src="/portfolio-website/assets/icons/react.png" alt="React"></div>',
+    '<div class="icon-item" data-name="Node.js"><img src="/portfolio-website/assets/icons/nodejs.png" alt="Node.js"></div>',
+    '<div class="icon-item" data-name="WordPress"><img src="/portfolio-website/assets/icons/wp.png" alt="WordPress"></div>'
   ],
 
   "Cloud & Server": [
-    '<div class="icon-item" data-name="Google Cloud Platform"><img src="assets/icons/gcp.png" alt="Google Cloud Platform"></div>',
-    '<div class="icon-item" data-name="Google Cloud Storage"><img src="assets/icons/gcs.png" alt="Google Cloud Storage"></div>',
-    '<div class="icon-item" data-name="Redis"><img src="assets/icons/redis.png" alt="Redis"></div>'
+    '<div class="icon-item" data-name="Google Cloud Platform"><img src="/portfolio-website/assets/icons/gcp.png" alt="Google Cloud Platform"></div>',
+    '<div class="icon-item" data-name="Google Cloud Storage"><img src="/portfolio-website/assets/icons/gcs.png" alt="Google Cloud Storage"></div>',
+    '<div class="icon-item" data-name="Redis"><img src="/portfolio-website/assets/icons/redis.png" alt="Redis"></div>'
   ],
 
   "API Development": [
-    '<div class="icon-item" data-name="REST API"><img src="assets/icons/restapi.png" alt="REST API"></div>',
-    '<div class="icon-item" data-name="Swagger"><img src="assets/icons/swagger.png" alt="Swagger"></div>',
-    '<div class="icon-item" data-name="JSON"><img src="assets/icons/json.png" alt="JSON"></div>'
+    '<div class="icon-item" data-name="REST API"><img src="/portfolio-website/assets/icons/restapi.png" alt="REST API"></div>',
+    '<div class="icon-item" data-name="Swagger"><img src="/portfolio-website/assets/icons/swagger.png" alt="Swagger"></div>',
+    '<div class="icon-item" data-name="JSON"><img src="/portfolio-website/assets/icons/json.png" alt="JSON"></div>'
   ],
 
   "Databases": [
-    '<div class="icon-item" data-name="PostgreSQL"><img src="assets/icons/postgresql.png" alt="PostgreSQL"></div>',
-    '<div class="icon-item" data-name="Firebase"><img src="assets/icons/fb.png" alt="Firebase"></div>'
+    '<div class="icon-item" data-name="PostgreSQL"><img src="/portfolio-website/assets/icons/postgresql.png" alt="PostgreSQL"></div>',
+    '<div class="icon-item" data-name="Firebase"><img src="/portfolio-website/assets/icons/fb.png" alt="Firebase"></div>'
   ],
 
   "Version Control": [
-    '<div class="icon-item" data-name="Git"><img src="assets/icons/git.png" alt="Git"></div>',
-    '<div class="icon-item" data-name="GitHub"><img src="assets/icons/github.png" alt="GitHub"></div>'
+    '<div class="icon-item" data-name="Git"><img src="/portfolio-website/assets/icons/git.png" alt="Git"></div>',
+    '<div class="icon-item" data-name="GitHub"><img src="/portfolio-website/assets/icons/github.png" alt="GitHub"></div>'
   ],
 
   "CI/CD": [
-    '<div class="icon-item" data-name="GitHub Actions"><img src="assets/icons/github-actions.png" alt="GitHub Actions"></div>'
+    '<div class="icon-item" data-name="GitHub Actions"><img src="/portfolio-website/assets/icons/github-actions.png" alt="GitHub Actions"></div>'
   ],
 
   "Testing & Monitoring": [
-    '<div class="icon-item" data-name="Jest"><img src="assets/icons/jest.png" alt="Jest"></div>',
-    '<div class="icon-item" data-name="Apache JMeter"><img src="assets/icons/apache.png" alt="Apache JMeter"></div>',
-    '<div class="icon-item" data-name="k6"><img src="assets/icons/k6.png" alt="k6"></div>',
-    '<div class="icon-item" data-name="sqlmap"><img src="assets/icons/sqlmap.png" alt="sqlmap"></div>',
-    '<div class="icon-item" data-name="OpenSSL"><img src="assets/icons/open.png" alt="OpenSSL"></div>',
-    '<div class="icon-item" data-name="UptimeRobot"><img src="assets/icons/uptimerobot.png" alt="UptimeRobot"></div>',
-    '<div class="icon-item" data-name="Postman"><img src="assets/icons/postman.png" alt="Postman"></div>'
+    '<div class="icon-item" data-name="Jest"><img src="/portfolio-website/assets/icons/jest.png" alt="Jest"></div>',
+    '<div class="icon-item" data-name="Apache JMeter"><img src="/portfolio-website/assets/icons/apache.png" alt="Apache JMeter"></div>',
+    '<div class="icon-item" data-name="k6"><img src="/portfolio-website/assets/icons/k6.png" alt="k6"></div>',
+    '<div class="icon-item" data-name="sqlmap"><img src="/portfolio-website/assets/icons/sqlmap.png" alt="sqlmap"></div>',
+    '<div class="icon-item" data-name="OpenSSL"><img src="/portfolio-website/assets/icons/open.png" alt="OpenSSL"></div>',
+    '<div class="icon-item" data-name="UptimeRobot"><img src="/portfolio-website/assets/icons/uptimerobot.png" alt="UptimeRobot"></div>',
+    '<div class="icon-item" data-name="Postman"><img src="/portfolio-website/assets/icons/postman.png" alt="Postman"></div>'
   ],
 
   "Virtualization": [
-    '<div class="icon-item" data-name="Oracle VirtualBox"><img src="assets/icons/ovb.png" alt="Oracle VirtualBox"></div>'
+    '<div class="icon-item" data-name="Oracle VirtualBox"><img src="/portfolio-website/assets/icons/ovb.png" alt="Oracle VirtualBox"></div>'
   ]
 };
 
