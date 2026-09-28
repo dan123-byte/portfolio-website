@@ -31,83 +31,127 @@ function Education() {
     });
 
     const nextCards = () => {
-        setStartIndex((startIndex + 1) % cards.length);
+        setStartIndex((prevIndex) => (prevIndex + 1) % cards.length);
     };
 
     const previousCards = () => {
         setStartIndex(
-            (startIndex - 1 + cards.length) % cards.length
+            (prevIndex) =>
+                (prevIndex - 1 + cards.length) % cards.length
         );
     };
 
     return (
         <section id="education">
 
-            <div className="container">
+            <div className="education-container">
 
-                {/* Section Title */}
-                <div className="text-center mb-4">
+                {/* Section Header */}
+                <div className="education-header">
+                    <span className="section-label">
+                        ACADEMIC JOURNEY
+                    </span>
+
                     <h2>Education</h2>
+
+                    <p>
+                        My academic journey from elementary school
+                        through my Information Technology degree.
+                    </p>
                 </div>
 
                 {/* Education Cards */}
-                <div id="educationCarousel">
-                    <div className="row">
+                <div className="education-carousel">
+
+                    <div className="education-cards">
 
                         {visibleCards.map((card, index) => (
-                            <div
-                                className="col-md-4 mb-3"
+                            <article
+                                className="education-card"
                                 key={`${card.title}-${index}`}
                             >
-                                <div className="card text-center h-100">
 
+                                <div className="education-image">
                                     <img
                                         src={card.img}
-                                        className="card-img-top"
                                         alt={card.title}
                                         loading="lazy"
                                     />
 
-                                    <div className="card-body">
-
-                                        <h5 className="card-title">
-                                            {card.title}
-                                        </h5>
-
-                                        <h6 className="card-subtitle mb-2 text-muted">
-                                            {card.subtitle}
-                                        </h6>
-
+                                    <div className="education-number">
+                                        {String(
+                                            (startIndex + index) %
+                                                cards.length +
+                                                1
+                                        ).padStart(2, "0")}
                                     </div>
+                                </div>
+
+                                <div className="education-content">
+
+                                    <span className="education-level">
+                                        {card.title}
+                                    </span>
+
+                                    <h3>
+                                        {card.subtitle}
+                                    </h3>
+
+                                    <div className="education-line"></div>
 
                                 </div>
-                            </div>
+
+                            </article>
                         ))}
 
                     </div>
 
-                    {/* Carousel Controls */}
-                    <div className="d-flex justify-content-center gap-3 mt-3">
+                    {/* Controls */}
+                    <div className="education-controls">
 
                         <button
-                            id="prevBtn"
                             type="button"
-                            className="btn btn-primary"
+                            className="education-arrow"
                             onClick={previousCards}
+                            aria-label="Previous education"
                         >
-                            Previous
+                            ←
                         </button>
 
+                        <div className="education-progress">
+                            <span>
+                                {String(startIndex + 1).padStart(2, "0")}
+                            </span>
+
+                            <div className="progress-line">
+                                <div
+                                    className="progress-fill"
+                                    style={{
+                                        width: `${
+                                            ((startIndex + 1) /
+                                                cards.length) *
+                                            100
+                                        }%`,
+                                    }}
+                                ></div>
+                            </div>
+
+                            <span>
+                                {String(cards.length).padStart(2, "0")}
+                            </span>
+                        </div>
+
                         <button
-                            id="nextBtn"
                             type="button"
-                            className="btn btn-primary"
+                            className="education-arrow"
                             onClick={nextCards}
+                            aria-label="Next education"
                         >
-                            Next
+                            →
                         </button>
 
                     </div>
+
                 </div>
 
             </div>

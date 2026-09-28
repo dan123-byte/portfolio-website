@@ -176,70 +176,80 @@ function TechnicalSkills() {
 
     return (
         <section id="technical-skills">
-            <div className="container">
+            <div className="technical-container">
 
-                {/* Section Title */}
-                <div className="text-center mb-4">
+                {/* Header */}
+                <div className="technical-header">
+                    <span className="section-label">
+                        EXPERTISE
+                    </span>
+
                     <h2>Technical Skills</h2>
+
+                    <p>
+                        A collection of technologies, tools, and platforms
+                        I have worked with throughout my academic and
+                        professional projects.
+                    </p>
                 </div>
 
-                {/* Category Selector */}
-                <div className="mb-4">
-                    <label
-                        htmlFor="skill-category"
-                        className="form-label"
-                    >
-                        Skill Category
-                    </label>
-
-                    <select
-                        id="skill-category"
-                        className="form-select"
-                        value={selectedCategory}
-                        onChange={(event) =>
-                            setSelectedCategory(event.target.value)
-                        }
-                    >
-                        {categories.map((category) => (
-                            <option
-                                key={category}
-                                value={category}
-                            >
-                                {category}
-                            </option>
-                        ))}
-                    </select>
+                {/* Category Navigation */}
+                <div className="skills-categories">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            type="button"
+                            className={`skill-category ${
+                                selectedCategory === category
+                                    ? "active"
+                                    : ""
+                            }`}
+                            onClick={() =>
+                                setSelectedCategory(category)
+                            }
+                        >
+                            {category}
+                        </button>
+                    ))}
                 </div>
 
-                {/* Skill Icons */}
-                <div id="icons-panel">
-                    <div className="row justify-content-center g-4">
+                {/* Skills */}
+                <div className="skills-panel">
 
+                    <div className="skills-panel-header">
+                        <div>
+                            <span>SELECTED CATEGORY</span>
+                            <h3>{selectedCategory}</h3>
+                        </div>
+
+                        <span className="skills-count">
+                            {skills[selectedCategory].length}{" "}
+                            {skills[selectedCategory].length === 1
+                                ? "skill"
+                                : "skills"}
+                        </span>
+                    </div>
+
+                    <div className="skills-grid">
                         {skills[selectedCategory].map((skill) => (
                             <div
-                                className="col-6 col-sm-4 col-md-3 col-lg-2"
+                                className="skill-card"
                                 key={skill.name}
                             >
-                                <div
-                                    className="icon-item text-center"
-                                    data-name={skill.name}
-                                >
+                                <div className="skill-icon">
                                     <img
                                         src={skill.image}
                                         alt={skill.name}
                                         loading="lazy"
                                     />
-
-                                    <p className="mt-2">
-                                        {skill.name}
-                                    </p>
                                 </div>
+
+                                <span>{skill.name}</span>
                             </div>
                         ))}
-
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
     );
