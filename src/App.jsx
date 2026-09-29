@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
+import BackToTop from "./components/BackToTop";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <TechnicalSkills />
             </main>
 
+            <BackToTop />
             <Footer />
         </>
     );
