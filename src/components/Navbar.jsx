@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 function Navbar() {
     const [activeSection, setActiveSection] = useState("home-1");
 
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem("theme") === "dark";
+    });
+
     useEffect(() => {
         const sections = document.querySelectorAll(
             "#home-1, #education, #projects, #technical-skills"
@@ -28,6 +32,15 @@ function Navbar() {
             sections.forEach((section) => observer.unobserve(section));
         };
     }, []);
+
+    useEffect(() => {
+        document.body.classList.toggle("dark-mode", darkMode);
+
+        localStorage.setItem(
+            "theme",
+            darkMode ? "dark" : "light"
+        );
+    }, [darkMode]);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
@@ -65,6 +78,7 @@ function Navbar() {
                 >
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
+                        {/* Home */}
                         <li className="nav-item">
                             <a
                                 className={`nav-link ${
@@ -78,6 +92,7 @@ function Navbar() {
                             </a>
                         </li>
 
+                        {/* Education */}
                         <li className="nav-item">
                             <a
                                 className={`nav-link ${
@@ -91,6 +106,7 @@ function Navbar() {
                             </a>
                         </li>
 
+                        {/* Projects */}
                         <li className="nav-item">
                             <a
                                 className={`nav-link ${
@@ -104,6 +120,7 @@ function Navbar() {
                             </a>
                         </li>
 
+                        {/* Skills */}
                         <li className="nav-item">
                             <a
                                 className={`nav-link ${
@@ -117,6 +134,30 @@ function Navbar() {
                             </a>
                         </li>
 
+                        {/* Dark / Light Mode */}
+                            <li className="nav-item theme-toggle-item">
+                                <button
+                                    className={`theme-toggle ${darkMode ? "dark" : "light"}`}
+                                    onClick={() => setDarkMode(!darkMode)}
+                                    aria-label={
+                                        darkMode
+                                            ? "Switch to light mode"
+                                            : "Switch to dark mode"
+                                    }
+                                    title={
+                                        darkMode
+                                            ? "Light mode"
+                                            : "Dark mode"
+                                    }
+                                >
+                                    <span className="theme-toggle-track">
+                                        <span className="theme-toggle-icon">
+                                            {darkMode ? "☀" : "☾"}
+                                        </span>
+                                    </span>
+                                </button>
+                            </li>
+
                     </ul>
                 </div>
 
@@ -124,5 +165,4 @@ function Navbar() {
         </nav>
     );
 }
-
 export default Navbar;
