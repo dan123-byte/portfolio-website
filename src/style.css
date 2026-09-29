@@ -76,6 +76,26 @@ section,
     );
 }
 
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 9999;
+    background: transparent;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: var(--second-orange);
+    width: 0;
+    transition: width 0.05s linear;
+}
 
 /* =========================================================
    NAVIGATION
@@ -2453,6 +2473,13 @@ body.dark-mode footer {
         );
 }
 
+body.dark-mode .scroll-progress-container {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .scroll-progress-bar {
+    background: var(--second-orange);
+}
 
 /* =========================================================
    DARK / LIGHT MODE TOGGLE

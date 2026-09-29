@@ -4,10 +4,12 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
     return (
         <>
+            <ScrollProgress />
             <Navbar />
 
             <main>
