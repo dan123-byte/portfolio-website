@@ -2274,6 +2274,14 @@ body.dark-mode #home-1 p {
     color: #cbd5e1;
 }
 
+body.dark-mode .resume-btn:not(.resume-download) {
+    color: #f8fafc;
+    border-color: #475569;
+}
+
+body.dark-mode .resume-btn:not(.resume-download) i {
+    color: #f8fafc;
+}
 
 /* HOME SECOND */
 
@@ -2285,7 +2293,6 @@ body.dark-mode #home-2 {
             #172554
         );
 }
-
 
 /* EDUCATION */
 
