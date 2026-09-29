@@ -1,31 +1,49 @@
 function Home() {
     return (
         <>
-            <section id="home-1">
-                <div>
-                    <img
-                        src="/portfolio-website/assets/image_prof.jpg"
-                        id="prof_headshot"
-                        alt="Professional Headshot"
-                        loading="lazy"
-                    />
-                </div>
-
-                <div>
-                    <div>
-                        <h1>Daniel Tababa</h1>
-                    </div>
-
-                    <div>
-                        <p>
-                            I am a developer with project-based experience in
-                            maintaining systems, developing new features, and
-                            building responsive websites. Strong background in
-                            full-stack development, API integration, databases,
-                            and QA testing.
-                        </p>
-                    </div>
-                </div>
+            <section id="home-1"> 
+                <div> 
+                    <img 
+                     src="/portfolio-website/assets/image_prof.jpg" 
+                     id="prof_headshot" 
+                     alt="Professional Headshot"
+                     loading="lazy" 
+                    /> 
+                </div> 
+                
+                <div> 
+                    <div> 
+                        <h1>Daniel Tababa</h1> 
+                    </div> 
+                    
+                    <div> 
+                        <p> I am a developer with project-based experience in maintaining systems, 
+                            developing new features, and building responsive websites. 
+                            Strong background in full-stack development, API integration, databases, 
+                            and QA testing. 
+                        </p> 
+                    </div> 
+                    
+                    <div className="home-buttons"> 
+                        <a 
+                            href="/portfolio-website/assets/TABABA_Resume.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="resume-btn" 
+                        > 
+                        <i className="fas fa-file-pdf">
+                            </i> View Resume 
+                        </a> 
+                            <a 
+                            href="/portfolio-website/assets/TABABA_Resume.pdf"
+                            download="TABABA_Resume.pdf" 
+                            className="resume-btn resume-download" 
+                        > 
+                        <i className="fas fa-download">
+                            </i> Download Resume 
+                        </a> 
+                    </div> 
+                </div> 
             </section>
 
             <section id="home-2">

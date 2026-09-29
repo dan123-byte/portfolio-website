@@ -300,6 +300,41 @@ section,
     max-width: 650px;
 }
 
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.resume-download {
+    background-color: var(--first-navy);
+    color: white;
+}
+
+.resume-btn:not(.resume-download) {
+    border: 2px solid var(--first-navy);
+    color: var(--first-navy);
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+}
 
 /* =========================================================
    HOME SECOND SECTION
