@@ -193,27 +193,35 @@ function TechnicalSkills() {
                     </p>
                 </div>
 
-                {/* Category Navigation */}
-                <div className="skills-categories">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            type="button"
-                            className={`skill-category ${
-                                selectedCategory === category
-                                    ? "active"
-                                    : ""
-                            }`}
-                            onClick={() =>
-                                setSelectedCategory(category)
+                {/* Category Dropdown */}
+                <div className="skills-category-selector">
+                    <label htmlFor="skill-category">
+                        SKILL CATEGORY
+                    </label>
+
+                    <div className="category-select-wrapper">
+                        <select
+                            id="skill-category"
+                            value={selectedCategory}
+                            onChange={(e) =>
+                                setSelectedCategory(e.target.value)
                             }
                         >
-                            {category}
-                        </button>
-                    ))}
+                            {categories.map((category) => (
+                                <option
+                                    key={category}
+                                    value={category}
+                                >
+                                    {category}
+                                </option>
+                            ))}
+                        </select>
+
+                        <span className="select-arrow">⌄</span>
+                    </div>
                 </div>
 
-                {/* Skills */}
+                {/* Skills Panel */}
                 <div className="skills-panel">
 
                     <div className="skills-panel-header">
