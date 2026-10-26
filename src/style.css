@@ -2543,7 +2543,6 @@ body.dark-mode .scroll-progress-bar {
     margin-left: 18px;
 }
 
-/* Main button */
 .theme-toggle {
     position: relative;
     width: 62px;
@@ -2559,7 +2558,6 @@ body.dark-mode .scroll-progress-bar {
         box-shadow 0.3s ease;
 }
 
-/* Inner track */
 .theme-toggle-track {
     position: relative;
     display: flex;
@@ -2568,7 +2566,6 @@ body.dark-mode .scroll-progress-bar {
     height: 100%;
 }
 
-/* Moving circle */
 .theme-toggle-icon {
     position: absolute;
     top: 0;
@@ -2597,7 +2594,6 @@ body.dark-mode .scroll-progress-bar {
         color 0.3s ease;
 }
 
-/* Light mode */
 .theme-toggle.light {
     background: rgba(255, 255, 255, 0.12);
 }
@@ -2606,7 +2602,6 @@ body.dark-mode .scroll-progress-bar {
     transform: translateX(0);
 }
 
-/* Dark mode */
 .theme-toggle.dark {
     background: rgba(255, 179, 71, 0.15);
     border-color: rgba(255, 179, 71, 0.35);
@@ -2618,7 +2613,6 @@ body.dark-mode .scroll-progress-bar {
     color: var(--second-orange);
 }
 
-/* Hover */
 .theme-toggle:hover {
     border-color: var(--second-orange);
     box-shadow: 0 0 0 3px rgba(255, 179, 71, 0.12);
@@ -2632,7 +2626,6 @@ body.dark-mode .scroll-progress-bar {
     transform: translateX(28px) scale(1.08);
 }
 
-/* Click */
 .theme-toggle:active .theme-toggle-icon {
     transform: scale(0.92);
 }
@@ -2654,4 +2647,221 @@ body.dark-mode .scroll-progress-bar {
         margin-top: 10px;
     }
 
+}
+
+/* ========================================
+   Added Animations
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home-1 > div {
+    animation: fadeUp 0.8s ease both;
+    animation-delay: 0.15s;
+}
+
+#home-1 > img {
+    animation: fadeUp 0.8s ease both;
+    animation-delay: 0.3s;
+}
+
+#home-1 img {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+}
+
+#home-1 img:hover {
+    transform: translateY(-6px) scale(1.02);
+    filter: saturate(1.1);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+}
+
+.education-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--second-orange);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.13);
+}
+
+.education-image img {
+    transition: transform 0.5s ease;
+}
+
+.education-card:hover .education-image img {
+    transform: scale(1.07);
+}
+
+.project-card,
+.skill-card,
+.skill-item,
+.skills-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.skill-card:hover,
+.skill-item:hover,
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+@keyframes underlineGrow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#home-1 h1::after,
+.education-header h2::after {
+    transform-origin: left;
+    animation: underlineGrow 0.8s ease 0.4s both;
+}
+
+button,
+.btn,
+.resume-btn,
+a.btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+.resume-btn:hover,
+a.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+}
+
+.navbar a,
+.navbar .nav-link {
+    transition: color 0.25s ease;
+}
+
+footer .left-footer img {
+    transition: transform 0.3s ease;
+}
+
+footer .left-footer img:hover {
+    transform: translateY(-4px) scale(1.04);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--second-orange);
+    outline-offset: 4px;
+}
+
+@media (max-width: 767.98px) {
+    .education-card:hover,
+    .project-card:hover,
+    .skill-card:hover,
+    .skill-item:hover,
+    .skills-card:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body,
+body * {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body.dark-mode .education-card:hover {
+    border-color: var(--second-orange);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .project-card:hover,
+body.dark-mode .skill-card:hover,
+body.dark-mode .skill-item:hover,
+body.dark-mode .skills-card:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode #home-1 img:hover {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    filter: saturate(1.15) brightness(1.05);
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn:hover,
+body.dark-mode .resume-btn:hover,
+body.dark-mode a.btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar .nav-link:hover {
+    color: var(--second-orange);
+}
+
+body.dark-mode footer .left-footer img:hover {
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.12));
+}
+
+body.dark-mode a:focus-visible,
+body.dark-mode button:focus-visible {
+    outline-color: var(--second-orange);
+    box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.15);
+}
+
+@media (max-width: 767.98px) {
+    body.dark-mode .education-card:hover,
+    body.dark-mode .project-card:hover,
+    body.dark-mode .skill-card:hover,
+    body.dark-mode .skill-item:hover,
+    body.dark-mode .skills-card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    body * {
+        transition: none !important;
+    }
 }
