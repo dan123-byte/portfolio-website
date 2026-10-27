@@ -101,7 +101,7 @@ function Projects() {
                         SELECTED WORK
                     </span>
 
-                    <h2>Projects</h2>
+                    <h2>Work Projects</h2>
 
                     <p>
                         A collection of academic, internship, and professional

@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
+import PersonalProjects from "./components/PersonalProjects";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
@@ -17,6 +18,7 @@ function App() {
                 <Home />
                 <Education />
                 <Projects />
+                <PersonalProjects />
                 <TechnicalSkills />
             </main>
 

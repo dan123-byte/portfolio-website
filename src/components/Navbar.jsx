@@ -9,7 +9,7 @@ function Navbar() {
 
     useEffect(() => {
         const sections = document.querySelectorAll(
-            "#home-1, #education, #projects, #technical-skills"
+            "#home-1, #education, #projects, #personal-projects, #technical-skills"
         );
 
         const observer = new IntersectionObserver(
@@ -116,7 +116,21 @@ function Navbar() {
                                 }`}
                                 href="#projects"
                             >
-                                Projects
+                                Work Projects
+                            </a>
+                        </li>
+
+                        {/* Personal Projects */}
+                        <li className="nav-item">
+                            <a
+                                className={`nav-link ${
+                                    activeSection === "personal-projects"
+                                        ? "active"
+                                        : ""
+                                }`}
+                                href="#personal-projects"
+                            >
+                                Personal Projects
                             </a>
                         </li>
 
