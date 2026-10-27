@@ -1913,84 +1913,170 @@ section,
 ========================================================= */
 
 footer {
-    background:
-        linear-gradient(
-            135deg,
-            var(--deep-navy),
-            var(--dark-navy)
-        );
+    background: linear-gradient(
+        135deg,
+        var(--deep-navy),
+        var(--dark-navy)
+    );
 
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 70px 8%;
-
-    gap: 50px;
-
+    padding: 50px 8% 25px;
+    gap: 0;
     width: 100%;
-}
-
-footer .left-footer img {
-    width: 220px;
-
-    height: auto;
-
-    object-fit: contain;
-
-    margin: 0;
-
-    opacity: 0.95;
-
-    transition: transform var(--transition);
-}
-
-footer .left-footer img:hover {
-    transform: scale(1.04);
-}
-
-footer .right-footer {
-    flex: 1;
-}
-
-footer .right-footer h4 {
-    margin-bottom: 10px;
-
-    font-size: 1rem;
-
-    font-weight: 500;
-
-    color: #94a3b8;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-}
-
-footer .right-footer h2 {
-    margin-bottom: 10px;
-
-    font-size: clamp(2.5rem, 5vw, 5rem);
-
-    font-weight: 700;
-
-    line-height: 1;
+    box-sizing: border-box;
 
     color: var(--white);
 }
 
-footer .right-footer h6 {
+footer .footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 35px;
+}
+
+footer .left-footer img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     margin: 0;
+    opacity: 0.95;
 
-    font-size: 1.2rem;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
 
+footer .left-footer img:hover {
+    transform: scale(1.04);
+    opacity: 1;
+}
+
+footer .right-footer {
+    flex: 1;
+    text-align: right;
+}
+
+footer .right-footer .footer-eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+footer .right-footer h2 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+}
+
+footer .right-footer .footer-description {
+    margin: 0 0 20px;
+    font-size: 1rem;
     font-weight: 400;
-
+    line-height: 1.7;
     color: #cbd5e1;
 }
 
+footer .footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+footer .footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    color: var(--white);
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+footer .footer-socials a:hover {
+    transform: translateY(-4px);
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--deep-navy);
+}
+
+footer .footer-socials a:focus-visible,
+footer .footer-nav a:focus-visible {
+    outline: 2px solid #cbd5e1;
+    outline-offset: 4px;
+}
+
+footer .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+footer .footer-copyright {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+}
+
+footer .footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+footer .footer-nav a {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+footer .footer-nav a:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+}
 
 /* =========================================================
    TABLET
@@ -2067,11 +2153,33 @@ footer .right-footer h6 {
     }
 
     footer {
+        padding: 50px 6%;
+    }
+
+    footer .footer-main {
+        gap: 30px;
+    }
+
+    footer .left-footer img {
+        width: 150px;
+    }
+
+    footer .right-footer {
+        text-align: right;
+    }
+
+    footer .right-footer h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    footer .footer-bottom {
         flex-direction: column;
-
+        align-items: center;
         text-align: center;
+    }
 
-        padding: 60px 6%;
+    footer .footer-nav {
+        justify-content: center;
     }
 }
 
@@ -2215,21 +2323,61 @@ footer .right-footer h6 {
     }
 
     footer {
-        padding: 50px 25px;
+        padding: 40px 25px 25px;
+    }
 
-        gap: 30px;
+    footer .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding-bottom: 30px;
     }
 
     footer .left-footer img {
-        width: 170px;
+        width: 140px;
+    }
+
+    footer .right-footer {
+        width: 100%;
+        text-align: center;
     }
 
     footer .right-footer h2 {
-        font-size: 2.8rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
-    footer .right-footer h6 {
-        font-size: 1rem;
+    footer .right-footer .footer-eyebrow {
+        font-size: 0.7rem;
+    }
+
+    footer .right-footer .footer-description {
+        font-size: 0.95rem;
+    }
+
+    footer .footer-socials {
+        justify-content: center;
+    }
+
+    footer .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+
+    footer .footer-nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    footer .footer-nav a {
+        font-size: 0.8rem;
+    }
+
+    footer .footer-copyright {
+        font-size: 0.8rem;
     }
 }
 
