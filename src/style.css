@@ -1401,29 +1401,6 @@ section,
     overflow: hidden;
 }
 
-#technical-skills::before {
-    content: "";
-
-    position: absolute;
-
-    width: 320px;
-    height: 320px;
-
-    top: -160px;
-    right: -100px;
-
-    border-radius: 50%;
-
-    background: rgba(30, 58, 138, 0.035);
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .technical-container {
     position: relative;
 
@@ -1431,11 +1408,6 @@ section,
 
     margin: 0 auto;
 }
-
-
-/* =========================================================
-   HEADER
-========================================================= */
 
 .technical-header {
     max-width: 650px;
