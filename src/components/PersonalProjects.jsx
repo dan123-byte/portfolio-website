@@ -29,6 +29,15 @@ const personalProjects = [
         github: "https://github.com/dan123-byte/marketing-landing-page",
         demo: "https://dan123-byte.github.io/marketing-landing-page/",
     },
+
+    {
+        title: "Inventory Management System",
+        image: "/portfolio-website/assets/stockflow.PNG",
+        description:
+            "A frontend inventory management system built with PHP, HTML, CSS, and JavaScript. It provides an interface for managing products, monitoring stock levels, and recording stock-in and stock-out transactions.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
+        github: "https://github.com/dan123-byte/inventory_management_system",
+    },
 ];
 
 function PersonalProjects() {
