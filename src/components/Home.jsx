@@ -26,7 +26,7 @@ function Home() {
                     
                     <div className="home-buttons"> 
                         <a 
-                            href="/portfolio-website/assets/TABABA_Resume.pdf" 
+                            href="/portfolio-website/assets/TABABA_Resume.docx.pdf" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="resume-btn" 
@@ -35,8 +35,8 @@ function Home() {
                             </i> View Resume 
                         </a> 
                             <a 
-                            href="/portfolio-website/assets/TABABA_Resume.pdf"
-                            download="TABABA_Resume.pdf" 
+                            href="/portfolio-website/assets/TABABA_Resume.docx.pdf"
+                            download="TABABA_Resume.docx.pdf" 
                             className="resume-btn resume-download" 
                         > 
                         <i className="fas fa-download">
