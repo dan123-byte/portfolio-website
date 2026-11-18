@@ -13,7 +13,8 @@ It serves as an online version of my resume and will also act as a portfolio hub
   - Navigation Bar
   - Home
   - Education
-  - Projects Skills
+  - Work Projects
+  - Personal Projects
   - Skills
   - Footer
 

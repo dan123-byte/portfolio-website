@@ -37,6 +37,7 @@ const personalProjects = [
             "A frontend inventory management system built with PHP, HTML, CSS, and JavaScript. It provides an interface for managing products, monitoring stock levels, and recording stock-in and stock-out transactions.",
         technologies: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
         github: "https://github.com/dan123-byte/inventory_management_system",
+        isLocal: true
     },
 ];
 
@@ -66,27 +67,36 @@ function PersonalProjects() {
                 </div>
 
                 <article className="personal-project-card" key={project.title}>
-                    <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="personal-project-image"
-                        aria-label={`Open ${project.title} live demo`}
-                    >
-                        <img
-                            src={project.image}
-                            alt={`${project.title} website screenshot`}
-                            loading="lazy"
-                            onError={(event) => {
-                                console.error("Screenshot could not load:", project.image);
-                                event.currentTarget.style.visibility = "hidden";
-                            }}
-                        />
-                        <span className="project-image-hint">
-                            <i className="fas fa-arrow-up-right-from-square"></i>
-                            View Live Site
-                        </span>
-                    </a>
+                    {project.isLocal ? (
+                        <div className="personal-project-image disabled">
+                            <img
+                                src={project.image}
+                                alt={`${project.title} website screenshot`}
+                                loading="lazy"
+                            />
+                            <span className="project-image-hint">
+                                Local Project Only
+                            </span>
+                        </div>
+                    ) : (
+                        <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="personal-project-image"
+                            aria-label={`Open ${project.title} live demo`}
+                        >
+                            <img
+                                src={project.image}
+                                alt={`${project.title} website screenshot`}
+                                loading="lazy"
+                            />
+                            <span className="project-image-hint">
+                                <i className="fas fa-arrow-up-right-from-square"></i>
+                                View Live Site
+                            </span>
+                        </a>
+                    )}
 
                     <div className="personal-project-top">
                         <div className="project-folder">
@@ -131,10 +141,17 @@ function PersonalProjects() {
                             Source Code
                         </a>
 
-                        <a href={project.demo} target="_blank" rel="noreferrer">
-                            Live Demo
-                            <i className="fas fa-arrow-up-right-from-square"></i>
-                        </a>
+                        {project.isLocal ? (
+                            <span className="disabled-demo">
+                                Live Demo
+                                <i className="fas fa-ban"></i>
+                            </span>
+                        ) : (
+                            <a href={project.demo} target="_blank" rel="noreferrer">
+                                Live Demo
+                                <i className="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        )}
                     </div>
                 </article>
 
