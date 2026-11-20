@@ -39,6 +39,16 @@ const personalProjects = [
         github: "https://github.com/dan123-byte/inventory_management_system",
         isLocal: true
     },
+
+    {
+        title: "Server Log Analyzer",
+        image: "/portfolio-website/assets/server-log-analyzer.PNG",
+        description:
+            "A Python-based log analysis tool that parses server access logs, extracts HTTP request statistics, identifies client and server errors, analyzes endpoint activity and traffic patterns, and generates visual PDF reports.",
+        technologies: ["Python", "Matplotlib", "ReportLab", "Regular Expressions"],
+        github: "https://github.com/dan123-byte/server-log-analyzer",
+        isLocal: true
+    },
 ];
 
 function PersonalProjects() {
