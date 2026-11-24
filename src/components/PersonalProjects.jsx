@@ -49,6 +49,16 @@ const personalProjects = [
         github: "https://github.com/dan123-byte/server-log-analyzer",
         isLocal: true
     },
+
+    {
+        title: "System Resource Monitor",
+        image: "/portfolio-website/assets/system-resource-monitor.PNG",
+        description:
+            "A Python-based desktop application that monitors real-time CPU, memory, disk, and network usage, visualizes system performance through interactive charts, displays system information, and provides tools for searching, sorting, and managing running processes.",
+        technologies: ["Python", "CustomTkinter", "psutil", "Matplotlib", "Threading"],
+        github: "https://github.com/dan123-byte/system-resource-monitor",
+        isLocal: true
+    },
 ];
 
 function PersonalProjects() {
